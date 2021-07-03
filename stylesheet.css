@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+:root {
+    --backCol: #12043E;
+    --blue: #885fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+}
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0%;
+    display: flex;
+    z-index: 2;
+    background-color: var(--backCol);
+}
+::-webkit-scrollbar {
+    width: 1em;
+    z-index: 3;
+}
+::-webkit-scrollbar-track {
+    background-color: #12043ebb;
+    z-index: 3;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #875fff, #cab9ffa6);
+    border-radius: 1vw;
+    z-index: 3;
+}
+#welcome-wrap
+{
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+}
+.welcome {
+    text-align: center;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    font-size: 10vw;
+    font-weight: 100;
+    color: var(--blue);
+    border-bottom: var(--blue) 0.3vw solid;
+    z-index: 2; 
+}
+#welcome-2 {
+    transform: scaleY(-1);
+    border: none;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+.part {
+    width: 100%;
+    height: auto;
+    margin: 20vh auto 20vh auto;
+    padding-bottom: 10vh;
+    background-color: var(--blue);
+    /*border-radius: 0.3em;*/
+    z-index: 3;
+}
+#intro-p {
+    width: 50%;
+    margin: 0vh auto 5vh auto;
+    font-size: 2.3em;
+    text-align: center;
+    padding-top: 5vh;
+}
+#intro-me {
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "image text";
+    height: 80vh;
+    width: 100%;
+}
+#intro-img {
+    justify-self: end;
+    margin: 1vh 2vw 0 1vw;
+    background-color: #12043E;
+    width: 20vw;
+    height: 80%;
+}
+#intro-text {
+    margin: 1vh 1vw 0 2vw;
+    height: 90%;
+    background: #5d42ac75;
+    padding: 1em;
+    justify-self: start;
+}
+#contact {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh;
+    grid-template-areas: 
+        "gmail-icon gmail"
+        "home-icon home"
+        "phone-icon phone"
+        "instagram-icon instagram"
+        "github-icon github"
+        "certificate-icon certificate";
+    align-items: center;
+    padding: 5vh 0 5vh 0;
+    /*margin-bottom: 25vh;*/
+    margin-top: 0;
+    font-size: 1.5em;
+    /*vertical-align: middle;*/
+}
+.contact-icon {
+    justify-self: right;
+    margin-right: 2vw;
+    height: auto;
+    width: 5vh;
+    /*border: black solid 1px;*/
+}
+.contact-text {
+    justify-self: left;
+    height: auto;
+    /*border: black solid 1px;
+    vertical-align: middle;*/
+}
+.contact-text, .contact-text:visited {
+    color: black;
+    text-decoration: none;
+}
+#certificate-text:hover, #home-text:hover {
+    text-decoration: underline;
+}
+#transition {
+    height: 100vh;
+    width: 100%;
+    background-image: url("transition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0vh;
+    z-index: -1;
+}
+
+
+
+.projects-body{
+    background-image: linear-gradient(130deg, #9e7dff, #885fff, #875fff80);
+}
+.projects-section {
+    
+    margin: 0;
+    padding: 0;
+}
+.projects {
+    border: solid black 1px;   
+    width: 90vw;
+    height: 20vh;
+    margin: 5vh auto 5vh auto;
+}
+
+
+
+
+
+
+
+footer {
+    height: 20vh;
+    width: 100%;
+    background: var(--backCol);
+    margin: 0 auto 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 1.6em;
+    color: var(--blue);
+}
+.footer-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5vh;
+}
+.footer-link, .footer-link:visited {
+    text-decoration: none;
+    color: var(--blue);
+    /*margin: 0 0 0 3vw;
+    padding: 0;*/
+    font-size: max(70%);
+}
+#home-link, #projects-link, #index-link, #copyright-link, #certificates-link, #tributes{
+    margin-right: 3vw;
+}
