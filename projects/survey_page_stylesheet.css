@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @media screen and (max-width: 480px) {
     #survey-form {
-        font-size: 55em;
-        background-color: red;
+        font-size: 0.9em;
     }
 }
 input:not(:placeholder-shown):invalid {
