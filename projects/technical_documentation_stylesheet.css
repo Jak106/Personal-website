@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-}
 :root {
     --white: #f3f3f3;
     --black: #141414;
@@ -236,4 +231,34 @@ label {
 }
 #function-p {
     margin-bottom: 0;
+}
+@media (max-width: 500px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "no1"    
+            "no2"
+            "no3"
+            "no4"
+            "no5"
+            "no6"
+            "no7"
+            "no8"
+            "no9"
+            "no10"
+            "no11"
+            "no12"
+            "no13";
+    }
+    #navbar {
+        display: none;
+    }
+    #main-doc {
+        position: static;
+    }
+    .main-section {
+        width: 90%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 }

@@ -33,8 +33,7 @@ body {
     border-radius: 1vw;
     z-index: 3;
 }
-#welcome-wrap
-{
+#welcome-wrap {
     margin: auto;
     width: 90%;
     z-index: 2;
@@ -81,16 +80,7 @@ body {
     font-size: 2.3em;
     text-align: center;
     padding-top: 5vh;
-}/*
-#intro-me {
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    grid-template-rows: 100%;
-    grid-template-areas: 
-        "image text";
-    height: 80vh;
-    width: 100%;
-}*/
+}
 #intro-img {
     grid-area: image;
     justify-self: end;
@@ -121,23 +111,18 @@ body {
         "certificate-icon certificate";
     align-items: center;
     padding: 5vh 0 5vh 0;
-    /*margin-bottom: 25vh;*/
     margin-top: 0;
     font-size: 1.5em;
-    /*vertical-align: middle;*/
 }
 .contact-icon {
     justify-self: right;
     margin-right: 2vw;
     height: auto;
     width: 5vh;
-    /*border: black solid 1px;*/
 }
 .contact-text {
     justify-self: left;
     height: auto;
-    /*border: black solid 1px;
-    vertical-align: middle;*/
 }
 .contact-text, .contact-text:visited {
     color: black;
@@ -230,13 +215,6 @@ footer {
         height: auto;
     }
 }
-
-
-
-
-
-
-
 .projects-body {
     background: var(--blue);
     background-repeat: no-repeat;
@@ -284,11 +262,6 @@ footer {
     grid-area: text;
     margin-left: 2vw;
 }
-/*
-#project-2,
-#project-4 {
-    margin: 5vh auto 5vh auto;
-}*/
 .projects-link {
     text-decoration: none;
     height: 20vh;
