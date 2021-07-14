@@ -121,6 +121,10 @@ input:invalid
     width: 30%;
     height: 35vh;
     background: #edd6ff7c;
+<<<<<<< HEAD
+=======
+    box-shadow: 7px 7px 7px #2f3e81a2; 
+>>>>>>> e552add5afd17691b7ea0447890d9bed70f5e5c8
     border-radius: 10%;
     text-align: center;
 }
