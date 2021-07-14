@@ -121,7 +121,7 @@ input:invalid
     height: 35vh;
     background: #edd6ff7c;
     box-shadow: 7px 7px 7px #2f3e81a2; 
-    border-radius: 0% 0% 5% 0%;
+    border-radius: 10% 0% 10% 0%;
     text-align: center;
 }
 #title
