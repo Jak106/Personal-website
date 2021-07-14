@@ -96,7 +96,7 @@ input:invalid
     height: 100%;
     margin-top: 5vh 0 0 5vw;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px #89abe3ff;
+    box-shadow: 10px 10px 5px #2f3e81a2;
 }
 #video-small-div
 {
@@ -120,7 +120,8 @@ input:invalid
     justify-content: space-evenly;
     width: 30%;
     height: 35vh;
-    background: #fffdd07c;
+    background: #edd6ff7c;
+    box-shadow: ;
     border-radius: 10%;
     text-align: center;
 }
