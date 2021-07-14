@@ -121,10 +121,7 @@ input:invalid
     width: 30%;
     height: 35vh;
     background: #edd6ff7c;
-<<<<<<< HEAD
-=======
     box-shadow: 7px 7px 7px #2f3e81a2; 
->>>>>>> e552add5afd17691b7ea0447890d9bed70f5e5c8
     border-radius: 10%;
     text-align: center;
 }
@@ -223,17 +220,3 @@ input:invalid
         0 0 92px rgb(62, 255, 245),
         0 0 102px rgb(0, 255, 242);
 }
-    /*
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-
-}
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 0.2em #fff, 0 0 0.4em #fff, 0 0 0.6em #e60073, 0 0 0.8em #e60073, 0 0 1em #e60073, 0 0 1.2em #e60073, 0 0 1.4em #e60073;
-  }
-  to {
-    text-shadow: 0 0 0.4em #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}*/
