@@ -12,7 +12,6 @@ html
     font-family: 'Varela Round', sans-serif /*font for the entire document*/
 }
 body
-/* big gay mamasita*/
 {
     margin: 0;
     background: linear-gradient(155deg, #ffc3f7af, #4b7ac5); /*background of the mid part*/
@@ -207,7 +206,8 @@ input:invalid
 #footer-text
 {
     padding-top: 5vh;
-    font-size: 1.7vw;
+    font-size: 1.5em;
     width: 35vw;
     margin: 5vh auto 0 auto;
+    text-shadow: 0 0 0 white;
 }
