@@ -121,7 +121,7 @@ input:invalid
     width: 30%;
     height: 35vh;
     background: #edd6ff7c;
-    box-shadow: ;
+    box-shadow: 7px 7px 7px #2f3e81a2; 
     border-radius: 10%;
     text-align: center;
 }
@@ -207,8 +207,7 @@ input:invalid
 #footer-text
 {
     padding-top: 5vh;
-    font-size: 1.5em;
+    font-size: 1.7vw;
     width: 35vw;
     margin: 5vh auto 0 auto;
-    text-shadow: 0 0 0 white;
 }
