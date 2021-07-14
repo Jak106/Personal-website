@@ -111,7 +111,6 @@ input:invalid
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 .offers
 {
@@ -122,7 +121,7 @@ input:invalid
     height: 35vh;
     background: #edd6ff7c;
     box-shadow: 7px 7px 7px #2f3e81a2; 
-    border-radius: 10%;
+    border-radius: 0% 0% 5% 0%;
     text-align: center;
 }
 #title
@@ -149,8 +148,17 @@ input:invalid
     height: 10%;
     justify-content: center;
 }
-
-
+@media screen and (max-width: 1024px) {
+    #offers-div {
+        flex-direction: column;
+        border: solid white 1px;
+    }
+    .offers {
+        width: 60%;
+        margin: auto;
+        height: 28vh;
+    }
+}
 /* Dont uncomment this IT'S SHITTY ANIMATION
 #order-button:hover
 {
