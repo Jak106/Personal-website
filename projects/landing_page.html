@@ -18,39 +18,33 @@
         </header>
         <div id="empty-space"></div>
         <main id="main">
-            <div id="video_div">
-                <div id="empty"></div>
-                <div id="video-small-div">
-                    <iframe id="video" height="315" frameborder="0" allowfullscreen
-                    src="Fighter_planes_are_awesome.mp4">
-                    </iframe>
+            <div id="video-div">
+                <!--<div id="empty"></div>-->
+                <iframe id="video" allowfullscreen src="Fighter_planes_are_awesome.mp4"></iframe>
+            </div>
+            <div id="empty"></div>
+            <div id="offers-div">
+                <div class="offers" id="offer-1">
+                    <h1 id="title">F-22 Raptor</h1>
+                    <p id="text">334 million</p>
+                    <button type="submit" id="order-button">Order</button> 
+                </div>
+                <div class="offers" id="offer-2">
+                    <h1 id="title">F-15 Eagle</h1>
+                    <p id="text">87 million</p>
+                    <button type="submit" id="order-button">Order</button> 
+                </div>
+                <div class="offers" id="offer-3">
+                    <h1 id="title">Eurofighter</h1>
+                    <p id="text">178 million</p>
+                    <button type="submit" id="order-button">Order</button> 
                 </div>
             </div>
-            <div id="shopping-info">
-                <div id="empty"></div>
-                <div id="offers-div">
-                    <div class="offers" id="offer-1">
-                        <h1 id="title">F-22 Raptor</h1>
-                        <p id="text">334 million</p>
-                        <button type="submit" id="order-button">Order</button> 
-                    </div>
-                    <div class="offers" id="offer-2">
-                        <h1 id="title">F-15 Eagle</h1>
-                        <p id="text">87 million</p>
-                        <button type="submit" id="order-button">Order</button> 
-                    </div>
-                    <div class="offers" id="offer-3">
-                        <h1 id="title">Eurofighter</h1>
-                        <p id="text">178 million</p>
-                        <button type="submit" id="order-button">Order</button> 
-                    </div>
-                </div>
-                <form id="form" action="https://www.freecodecamp.com/email-submit">
-                    <label for="email id="name-label">We will contact you via email you will enter:</label>
-                    <input id="email" type="email" name="Email" placeholder="E-mail" required>
-                    <button type="submit" id="submit-button" name="submit">Submit</button>
-                </form>
-            </div>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="email" id="email-label">We will contact you via email you will enter:</label>
+                <input id="email" type="email" name="Email" placeholder="E-mail" required>
+                <button type="submit" id="submit-button" name="submit">Submit</button>
+            </form>
         </main>
         <footer id="footer">
             <p id="footer-text">Thanks for considering our offer</p>

@@ -69,40 +69,47 @@ input:invalid
 #main /*mid part*/
 {
     width: 100%;
-    height: 120vh;
-    display: flex;
-    flex-direction: row;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30;
+    grid-template-areas: 
+        "video orders"
+        "video email";
 }
-#video_div
+#video-div
 {
-    width: 50%;
+    height: 91%;
+    width: 90%;
+    grid-area: video;
+    /*margin-top: 5vh;*/
+    /*border: solid white 1px;*/
+    margin: 5vh auto auto auto;
 }
 #empty
 {
     height: 25vh;
 }
-#empty-space
-{
-    background: white;
-    position: fixed;
+#empty-space {
+    height: 15vh;
 }
 #shopping-info
 {
-    width: 50%;
+    width: 100%;
 }
 #video
 {
     width: 100%;
     height: 100%;
+    border: none;
+    border-radius: 3em 0 3em 0;
+/*
+    background: transparent;
     margin-top: 5vh 0 0 5vw;
-    border-radius: 20px;
+    border-radius: 20px;*/
+
+
     box-shadow: 10px 10px 5px #2f3e81a2;
-}
-#video-small-div
-{
-    width: 90%;
-    height: 50%;
-    margin: 5vh 0vw 0 2vw;
 }
 #offers-div
 {
@@ -111,6 +118,8 @@ input:invalid
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    grid-area: orders;
+    /*border: solid white 1px;*/
 }
 .offers
 {
@@ -120,8 +129,8 @@ input:invalid
     width: 30%;
     height: 35vh;
     background: #edd6ff7c;
-    box-shadow: 7px 7px 7px #2f3e81a2; 
-    border-radius: 0% 0% 5% 0%;
+    box-shadow: 7px 7px 7px #2f3e817a; 
+    border-radius: 10% 0% 10% 0%;
     text-align: center;
 }
 #title
@@ -148,17 +157,7 @@ input:invalid
     height: 10%;
     justify-content: center;
 }
-@media screen and (max-width: 1024px) {
-    #offers-div {
-        flex-direction: column;
-        border: solid white 1px;
-    }
-    .offers {
-        width: 60%;
-        margin: auto;
-        height: 28vh;
-    }
-}
+
 /* Dont uncomment this IT'S SHITTY ANIMATION
 #order-button:hover
 {
@@ -170,11 +169,13 @@ input:invalid
 #form
 {
     width: 85%;
-    margin-top: 8.6vh;
+    /*margin-top: 8.6vh;*/
     margin-left: 3.8vw;
-    font-size: 1.6vw;
+    font-size: 1.6em;
     display: flex;
     flex-direction: column;
+    grid-area: email;
+    /*border: solid white 1px;*/
 }
 #email
 {
@@ -183,10 +184,13 @@ input:invalid
     border: transparent solid 1px;
     border-radius: 10px;    
     margin-left: auto;
-    margin-top: 2vh;
-    font-size: 1.1vw;
+    /*margin-top: 2vh;*/
+    font-size: 0.8em;
     font-family: 'Varela Round';
     font-weight: lighter;
+}
+#email-label {
+    margin-bottom: 1.8vh;
 }
 #submit-button
 {
@@ -195,12 +199,44 @@ input:invalid
     border-radius: 50px;
     border: transparent solid 1px;
     margin-top: 2vh;
-    font-size: 1.3vw;
+    font-size: 0.9em;
     font-family: 'Varela Round';
 }
 #submit-button:hover
 {
     text-decoration: underline;
+}
+@media screen and (max-width: 1024px) {
+    #main {
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "video orders"
+            "email orders";
+        height: 90vh;   
+    }
+    #offers-div {
+        flex-direction: column;
+        border: solid white 1px;
+    }
+    .offers {
+        width: 55%;
+        margin: 0 auto 0 auto;
+        height: 28vh;
+    }
+    #offer-2 {
+        margin: 2vh auto 2vh auto;
+    }
+    #form {
+        margin-top: 5vh;
+        border: solid white 1px;
+        width: 87%;
+    }
+    #video-div {
+        border: solid white 1px;
+    }
+    #email-label {
+        font-size: 0.8em;
+    }
 }
 #footer
 {
