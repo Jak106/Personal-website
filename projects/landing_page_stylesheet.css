@@ -30,12 +30,13 @@ body {
     width: 40%;
     display: flex;
     justify-content: left;
+    background: transparent;
 }
 #header-img {
     height: 50%;
     width: 60%;
     margin: auto 0 auto 5vw;
-    border: solid red 1px;
+    background: transparent;
 }
 #nav-bar {
     height: 100%;

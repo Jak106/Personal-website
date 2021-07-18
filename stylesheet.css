@@ -65,10 +65,10 @@ body {
     z-index: 3;
 }
 #intro {
-    height: 120vh;
+    height: auto;
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: auto 70%;
+    grid-template-rows: auto auto;
     grid-template-areas: 
         "heading heading"
         "image text";
@@ -92,11 +92,11 @@ body {
 #intro-text {
     grid-area: text;
     margin: 1vh 3vw 0 2vw;
-    height: 90%;
+    height: auto;
     background: #5d42ac75;
     padding: 1em;
     justify-self: start;
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 #contact {
     display: grid;

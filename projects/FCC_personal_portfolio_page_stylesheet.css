@@ -45,9 +45,9 @@ body {
 #welcome-section {
     font-size: 5em;
     height: 75vh;
-    width: 50vw;
+    width: 20vw;
     color: white;
-    margin: 15vh 0 0 5vw; /*this can be used to move text, margin: space-top(unit vh) space-right(unit vw) space-bottom(unit vh) space-left(unit vw)*/
+    margin: 15vh 0 0 5vw;
     padding: 0;
 }
 .project-1 {
