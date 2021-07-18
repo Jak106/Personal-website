@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Landing page</title>
         <link type="text/css" rel="stylesheet" href="landing_page_stylesheet.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header id="header">
@@ -11,9 +12,9 @@
                 <img src="LM-logo.png" id="header-img">                
             </div>
             <nav id="nav-bar">
-                <a href="#video" id="link-1" class="nav-link">Video</a>
-                <a href="#form" id="link-2" class="nav-link">Shopping info</a>
-                <a href="#footer" id="link-3" class="nav-link">Footer</a>
+                <a href="#video" id="link-1" class="nav-link"><span id="un">Video</span></a>
+                <a href="#form" id="link-2" class="nav-link"><span id="un">Shopping info</span></a>
+                <a href="#footer" id="link-3" class="nav-link"><span id="un">Footer</span></a>
             </nav>
         </header>
         <main id="main">
@@ -40,7 +41,7 @@
                 </div>
             </div>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <label for="email" id="email-label">We will contact you via email you will enter:</label>
+                <label for="email" id="email-label">You will be contacted via email:</label>
                 <input id="email" type="email" name="Email" placeholder="E-mail" required>
                 <button type="submit" id="submit-button" name="submit">Submit</button>
             </form>

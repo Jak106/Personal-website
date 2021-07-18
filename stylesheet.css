@@ -154,10 +154,6 @@ footer {
     font-size: 1.6em;
     color: var(--blue);
 }
-.footer-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.5vh;
-}
 .footer-link, .footer-link:visited {
     text-decoration: none;
     color: var(--blue);
@@ -168,7 +164,7 @@ footer {
 #home-link, #projects-link, #index-link, #copyright-link, #certificates-link, #tributes{
     margin-right: 3vw;
 }
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .part {
         margin: 10vh auto 10vh auto;
     }
@@ -270,6 +266,7 @@ footer {
     .projects-section {
         grid-template-columns: 100%;
         grid-template-rows: 50vh 50vh 50vh 50vh;
+        margin-bottom: 30vh;
     }
     .project-part {
         grid-template-rows: 20vh 5vh 20vh;
@@ -293,4 +290,46 @@ footer {
     .projects-part-text {
         margin: 1vh 0 1vh 10vw;
     }
+}
+#unB,
+#unP {
+    margin: 0;
+    padding: 0;
+    /*width: 100%;*/
+    height: 4vh;
+    display: inline-block;
+    text-align: center;
+    min-height: 5vh;
+    line-height: 4vh;
+    /*font-size: 1.2em;*/
+}
+#unB::after,
+#unP::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+    margin-left: auto;
+    margin-right: auto;
+}
+#unB::after {
+    background: black;
+}
+#unP::after {
+    background: var(--blue);
+}
+#unB:hover::after {
+    width: 95%;
+}
+#unP:hover::after {
+    width: 90%;
+}
+#empty-body{
+    height: 80vh;
+}
+#empty-footer {
+    position: absolute;
+    top: 80vh;
 }

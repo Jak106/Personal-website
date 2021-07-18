@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@media screen and (max-width: 480px) {
-    #survey-form {
-        font-size: 0.9em;
-    }
-}
 input:not(:placeholder-shown):invalid {
     box-shadow: 0 0 0px 3px rgba(255, 0, 0, 0.63);
 }
@@ -127,4 +122,24 @@ textarea {
 .radiobox-label:hover,
 #dropdown {
     cursor:pointer;
+}
+@media (max-width: 480px) {
+    main {
+        width: 90%;
+    }
+    #title {
+        font-size: 1.5em;
+        padding-top: 5vh;
+    }
+    #description {
+        font-size: 1.2em;
+    }
+    #survey-form {
+        margin-top: 5vh;
+        font-size: 1.1em;
+    }
+    #submit {
+        min-width: 30vw;
+        height: 8vh;
+    }
 }

@@ -1,34 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-/*Phone layout not yet created*/
-
-/* DON'T MIND UP TO LINE 9
-@media (max-width: 650px) {
-    #nav-bar {
-      background: tomato;
-    }
-  }*/
+input:not(:placeholder-shown):invalid {
+    box-shadow: 0 0 0px 3px rgba(255, 0, 0, 0.63);
+}
+input:valid {
+    box-shadow: none;
+}
+::placeholder {
+    color: rgba(1, 19, 15, 0.671);
+}
 html {
-    font-family: 'Varela Round', sans-serif /*font for the entire document*/
+    font-family: 'Varela Round', sans-serif
 }
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(155deg, #ffc3f7af, #4b7ac5); /*background of the mid part*/
+    background: linear-gradient(155deg, #ffc3f7af, #4b7ac5);
 }
-
-
-
-/*DON'T MIND UP TO LINE 24*/
-/*
-input [type=email],
-input:invalid
-{
-    box-shadow: 0 0 5px 1px #DE3163;
-}*/
-
-
-
-#header { /*TOP PART*/
+#header {
     width: 100%;
     height: 15vh;
     position: fixed;
@@ -38,46 +26,34 @@ input:invalid
     display: flex;
     justify-content: space-between;
 }
-#header-image
-{
-    width: 40%;   
+#header-image {
+    width: 40%;
     display: flex;
     justify-content: left;
 }
-#header-img /*Place for logo in top left part, red bordered box*/
-{
+#header-img {
     height: 50%;
-    width: 60%; /*Width is calculeted from 50% width of entire header(100% screen size)*/ 
-    margin: auto 0 auto 5vw; /*to move logo margin: top right bottom left;*/
-    border: solid red 1px; /*don't delete*/
+    width: 60%;
+    margin: auto 0 auto 5vw;
+    border: solid red 1px;
 }
-#nav-bar /*all text in footer is within lines 47-68*/
-{
+#nav-bar {
     height: 100%;
     width: 60%;
-    display: flex; /*Don't change*/
-    justify-content: space-evenly; /*to move text horizontally see part justify content https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-    align-items: flex-end; /*to move text vertically see part align-items https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
-#link-1, #link-2, #link-3
-{
-    /* to move text just a bit use margin:margin-(from where): value; recommended only for vertical movement*/
-    margin-bottom: 2vh;
+#link-1, 
+#link-2, 
+#link-3 {
     color: white;
     text-decoration: none;
     width: auto;
-    height: 20%;
+    height: auto;
     font-size: 1.3em;
 }
-#link-1:hover, #link-2:hover, #link-3:hover
-{
-    text-decoration: underline;
-}
-
-
-
-#main /*mid part*/
-{
+#main {
     margin-top: 15vh;
     width: 100%;
     height: 65vh;
@@ -88,115 +64,78 @@ input:invalid
         "video orders"
         "video email";
 }
-#video-div
-{
+#video-div {
     height: 91%;
     width: 90%;
     grid-area: video;
-    /*margin-top: 5vh;*/
-    /*border: solid white 1px;*/
     margin: 5vh auto auto auto;
 }
-
-/* possible to delete
-#empty
-{
-    height: 25vh;
-}
-*/
-
-#shopping-info
-{
-    width: 100%;
-}
-#video
-{
+#video {
     width: 100%;
     height: 100%;
     border: none;
     border-radius: 3em 0 3em 0;
-/*
-    background: transparent;
-    margin-top: 5vh 0 0 5vw;
-    border-radius: 20px;*/
-
-
     box-shadow: 10px 10px 5px #2f3e81a2;
 }
-#offers-div
-{
+#offers-div {
     width: 90%;
+    height: auto;
     margin: 5vh auto 5vh auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     grid-area: orders;
-    /*border: solid white 1px;*/
 }
-.offers
-{
+.offers {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 30%;
     height: 35vh;
     background: #edd6ff7c;
-    box-shadow: 7px 7px 7px #2f3e817a; 
     border-radius: 10% 0% 10% 0%;
     text-align: center;
 }
-#title
-{
+.offers:hover {
+    transition: 500ms;
+    box-shadow: 7px 7px 7px #2f3e817a; 
+}
+#title {
     width: 100%;
     font-weight: lighter;
     font-size: 1.9em;
 }
-#text
-{
+#text {
     width: 100%;
     font-size: 1.5em;
 }
-#order-button
-{
+#order-button {
     margin-left: auto;
     margin-right: auto;
     background: transparent;
     border-radius: 20%;
     border: solid transparent 1px;
     font-size: 1.3em;
-    /*box-shadow: 5px 2px 10px rgba(123, 123, 196, 0.596);*/
     width: 30%;
     height: 10%;
     justify-content: center;
 }
-
-/* Dont uncomment this IT'S SHITTY ANIMATION
-#order-button:hover
-{
-    width: 35%;
-    height: 15%;
-    font-size: x-large;
-    margin-top: 10%;
-}*/
-#form
-{
+#form {
     width: 85%;
-    /*margin-top: 8.6vh;*/
+    height: auto;
     margin-left: 3.8vw;
+    margin-bottom: 5vh;
     font-size: 1.6em;
     display: flex;
     flex-direction: column;
     grid-area: email;
-    /*border: solid white 1px;*/
 }
-#email
-{
+#email {
     width: 99%;
     height: 4vh;
     border: transparent solid 1px;
     border-radius: 10px;    
     margin-left: auto;
-    /*margin-top: 2vh;*/
     font-size: 0.8em;
     font-family: 'Varela Round';
     font-weight: lighter;
@@ -204,8 +143,7 @@ input:invalid
 #email-label {
     margin-bottom: 1.8vh;
 }
-#submit-button
-{
+#submit-button {
     width: 100%;
     height: 4vh;
     border-radius: 50px;
@@ -214,9 +152,15 @@ input:invalid
     font-size: 0.9em;
     font-family: 'Varela Round';
 }
-#submit-button:hover
-{
-    text-decoration: underline;
+#submit-button:hover {
+    background-color: #6405a0c2;
+    color: white;
+    -webkit-transition: color, background-color 500ms linear;
+    -ms-transition: color, background-color 500ms linear;
+    transition: color, background-color 500ms linear;
+}
+button:hover {
+    cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
     #main {
@@ -228,7 +172,6 @@ input:invalid
     }
     #offers-div {
         flex-direction: column;
-        border: solid white 1px;
     }
     .offers {
         width: 55%;
@@ -240,18 +183,13 @@ input:invalid
     }
     #form {
         margin-top: 5vh;
-        border: solid white 1px;
         width: 87%;
-    }
-    #video-div {
-        border: solid white 1px;
     }
     #email-label {
         font-size: 0.8em;
     }
 }
-#footer
-{
+#footer {
     width: 90vw;
     height: 15vh;
     margin: 5vh auto 0 auto;
@@ -261,8 +199,7 @@ input:invalid
     align-content: center;
     display: flex;
 }
-#footer-text
-{
+#footer-text {
     font-size: 1.6em;
     width: auto;
     height: auto;
@@ -280,4 +217,43 @@ input:invalid
         0 0 1.4em #ffffff,
         0 0 1.6em #ffffff,
         0 0 1.8em #ffffff;
+}
+#un {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 4vh;
+    display: inline-block;
+    text-align: center;
+    min-height: 5vh;
+    line-height: 4vh;
+    font-size: 1.2rem;
+}
+#un::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 300ms;
+    margin-left: auto;
+    margin-right: auto;
+}
+#un:hover::after {
+    width: 90%;
+}
+@media (max-width: 480px) {
+    #nav-bar {
+        margin-bottom: 5vh;
+    }
+    #main {
+        grid-template-columns: 100%;
+        grid-template-rows: 40vh 100vh 10vh;
+        grid-template-areas:
+            "video"
+            "orders"
+            "email";
+        height: auto;
+        margin-bottom: 15vh;
+    }
 }

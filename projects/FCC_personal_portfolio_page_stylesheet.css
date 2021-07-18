@@ -79,6 +79,16 @@ body {
     grid-template-rows: 40vh 40vh;
   }
 }
+@media screen and (max-width: 480px) {
+  #projects {
+    grid-template-areas: 
+        "project1"
+        "project2"
+        "project3";
+    grid-template-columns: 100%;
+    grid-template-rows: 40vh 40vh 40vh;
+  }
+}
 #link {
     display: flex;
     flex-direction: column;
