@@ -251,9 +251,11 @@ footer {
     width: auto;
     max-width: 95%;
     height: auto;
+    max-height: 70%;
     justify-self: center;
     align-self: center;
     margin: 1vh 1vw 1vh 1vw;
+    border-radius: 5px;
 }
 .projects-part-heading {
     margin: auto 0 auto 0;
