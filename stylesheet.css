@@ -159,7 +159,7 @@ footer {
     color: var(--blue);
     /*margin: 0 0 0 3vw;
     padding: 0;*/
-    font-size: 1.5em;
+    font-size: 1.5em max(70%);
 }
 #home-link, #projects-link, #index-link, #copyright-link, #certificates-link, #tributes{
     margin-right: 3vw;
