@@ -96,7 +96,7 @@ body {
     background: #5d42ac75;
     padding: 1em;
     justify-self: start;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 #contact {
     display: grid;
