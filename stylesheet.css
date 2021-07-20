@@ -326,8 +326,33 @@ footer {
 #unP:hover::after {
     width: 90%;
 }
-#empty-body{
-    height: 80vh;
+#empty-body {
+    background: #885fff;
+}
+#empty-image {
+    background-repeat: no-repeat;
+    background-image: url("404-big-bcg.jpg");
+    background-size: 100% 100%;
+    width: 100vh;
+    height: 100vw;
+    /*margin: 4em auto auto auto;*/
+    z-index: 1;
+    max-width: 788px;
+    max-height: 575px;
+    position: absolute;
+    top: 80px;
+    left: 90px;
+    position: fixed;
+    border: solid white 1px;
+}
+#empty-text {
+    z-index: 2;
+    font-size: 1.7em;
+    color: var(--backCol);
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    position: fixed;
 }
 #empty-footer {
     position: absolute;
