@@ -235,6 +235,10 @@ footer {
     height: auto;
     margin: 1vh 1vw 3vh 1vw;
 }
+.project-part:hover {
+    box-shadow: 10px 10px 15px #37207a85;
+    transition: 300ms;
+}
 .project-part {
     display: grid;
     height: auto;
