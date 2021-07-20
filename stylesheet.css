@@ -345,7 +345,6 @@ footer {
     top: 80px;
     left: 90px;
     position: fixed;
-    border: solid white 1px;
 }
 #empty-text {
     z-index: 2;
