@@ -65,7 +65,7 @@ body {
     z-index: 3;
 }
 #intro {
-    height: 90vh;
+    min-height: 90vh;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto;
