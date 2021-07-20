@@ -222,11 +222,12 @@ footer {
     padding: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-template-rows: 30vh 25vh 25vh 25vh;
     justify-content: center;
 }
 .project-part {
     display: grid;
+    height: auto;
     grid-template-columns: 20% 80%;
     grid-template-rows: 30% 70%;
     grid-template-areas: 
@@ -238,7 +239,7 @@ footer {
     color: black; 
     margin: 0;
     padding: 0;
-    height: 20vh;
+    height: auto;
 }
 .projects-part-image {
     grid-area: image;
@@ -253,12 +254,16 @@ footer {
     margin: auto 0 auto 0;
     grid-area: heading;
     text-decoration: none;
+    border: solid white 1px;
 }
 .projects-part-text {
     grid-area: text;
+    border: solid white 1px;
     margin-left: 2vw;
     font-size: 1.2em;
     width: 90%;
+    /*height: auto;*/
+    padding-bottom: 3vh;
 }
 .projects-link {
     text-decoration: none;
@@ -267,8 +272,9 @@ footer {
 @media (max-width: 500px) {
     .projects-section {
         grid-template-columns: 100%;
-        grid-template-rows: 50vh 50vh 50vh 50vh;
+        grid-template-rows: 65vh 60vh 60vh 60vh;
         margin-bottom: 30vh;
+        height: auto;
     }
     .project-part {
         grid-template-rows: 20vh 5vh 20vh;
@@ -278,7 +284,7 @@ footer {
             "heading"
             "text";
         align-self: center;
-        height: 45vh;
+        height: 60vh;
     }
     .projects-part-image {
         margin: 2vh 0 2vh 0;
@@ -291,6 +297,8 @@ footer {
     }
     .projects-part-text {
         margin: 1vh 0 1vh 10vw;
+        height: auto;
+        width: 80%;
     }
 }
 #unB,
