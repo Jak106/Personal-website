@@ -94,9 +94,9 @@ body {
     margin: 1vh 3vw 0 2vw;
     height: auto;
     background: #5d42ac75;
-    padding: 1em;
+    padding: 2em;
     justify-self: start;
-    font-size: 1.1rem;
+    font-size: 1.4em;
 }
 #contact {
     display: grid;
@@ -257,6 +257,8 @@ footer {
 .projects-part-text {
     grid-area: text;
     margin-left: 2vw;
+    font-size: 1.2em;
+    width: 90%;
 }
 .projects-link {
     text-decoration: none;
