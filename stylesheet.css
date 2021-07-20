@@ -222,14 +222,19 @@ footer {
     padding: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 25vh 25vh 25vh;
+    grid-template-rows: auto auto auto auto auto;
     justify-content: center;
+}
+.projects-link {
+    text-decoration: none;
+    height: auto;
+    margin: 1vh 1vw 3vh 1vw;
 }
 .project-part {
     display: grid;
     height: auto;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 30% 70%;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 25% 75%;
     grid-template-areas: 
         "image heading"
         "image text";
@@ -243,38 +248,30 @@ footer {
 }
 .projects-part-image {
     grid-area: image;
-    width: 15vw;
-    height: 15vh;
+    width: auto;
+    max-width: 95%;
+    height: auto;
     justify-self: center;
     align-self: center;
     margin: 1vh 1vw 1vh 1vw;
-    border: solid white 1px;
 }
 .projects-part-heading {
     margin: auto 0 auto 0;
     grid-area: heading;
     text-decoration: none;
-    border: solid white 1px;
 }
 .projects-part-text {
     grid-area: text;
-    border: solid white 1px;
     margin-left: 2vw;
     font-size: 1.2em;
     width: 90%;
     /*height: auto;*/
     padding-bottom: 3vh;
 }
-.projects-link {
-    text-decoration: none;
-    height: 20vh;
-}
+
 @media (max-width: 500px) {
     .projects-section {
-        grid-template-columns: 100%;
-        grid-template-rows: 65vh 60vh 60vh 60vh;
         margin-bottom: 30vh;
-        height: auto;
     }
     .project-part {
         grid-template-rows: 20vh 5vh 20vh;
