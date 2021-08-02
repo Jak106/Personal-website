@@ -86,7 +86,7 @@ body {
     margin: 1vh 2vw 0 1vw;
     background-color: #12043E;
     width: 30vw;
-    height: 80%;
+    height: auto;
 }
 #intro-text {
     grid-area: text;
@@ -174,13 +174,13 @@ footer {
     #intro {
         display: grid;
         grid-template-columns: 40% 60%;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 30% auto;
         grid-template-areas: 
             "image heading"
             "text text";
     }
     #intro-img {
-        margin-top: 5vh;
+        align-self: center;
     }
     #intro-p {
         margin: auto;
@@ -193,6 +193,7 @@ footer {
         width: 80%;
         padding: 1em;
         font-size: 1em;
+        margin-bottom: 5vh;
     }
     #contact {
         grid-template-columns: 20% 80%;
