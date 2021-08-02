@@ -327,7 +327,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
 #unB::after {
     background: black;
 }
