@@ -61,7 +61,6 @@ body {
     margin: 20vh auto 20vh auto;
     padding-bottom: 10vh;
     background-color: var(--blue);
-    /*border-radius: 0.3em;*/
     z-index: 3;
 }
 #intro {
@@ -154,11 +153,10 @@ footer {
     font-size: 1.4em;
     color: var(--blue);
 }
-.footer-link, .footer-link:visited {
+.footer-link, 
+.footer-link:visited {
     text-decoration: none;
     color: var(--blue);
-    /*margin: 0 0 0 3vw;
-    padding: 0;*/
     font-size: 1.5em max(70%);
 }
 #home-link, 
@@ -202,7 +200,7 @@ footer {
     .contact-text {
         font-size: 0.7em;
     }
-    footer{
+    footer {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 7vh 7vh 7vh;
@@ -312,13 +310,11 @@ footer {
 #unP {
     margin: 0;
     padding: 0;
-    /*width: 100%;*/
     height: 4vh;
     display: inline-block;
     text-align: center;
     min-height: 5vh;
     line-height: 4vh;
-    /*font-size: 1.2em;*/
 }
 #unB::after,
 #unP::after {
@@ -352,7 +348,6 @@ footer {
     background-size: 100% 100%;
     width: 100vh;
     height: 100vw;
-    /*margin: 4em auto auto auto;*/
     z-index: 1;
     max-width: 788px;
     max-height: 575px;
