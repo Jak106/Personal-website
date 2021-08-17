@@ -209,7 +209,7 @@ footer {
         text-align: center;
         align-content: center;
         height: auto;
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .footer-link {
         height: auto;
@@ -279,7 +279,7 @@ footer {
     padding-bottom: 3vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .projects-section {
         margin-bottom: 30vh;
     }
