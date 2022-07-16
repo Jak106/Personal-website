@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+:root {
+    --white: #f3f3f3;
+    --black: #141414;
+    font-family: 'Play', sans-serif;
+}
+body {
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-areas: 
+        "header no1"    
+        "header no2"
+        "header no3"
+        "header no4"
+        "header no5"
+        "header no6"
+        "header no7"
+        "header no8"
+        "header no9"
+        "header no10"
+        "header no11"
+        "header no12"
+        "header no13";
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+    background: var(--black);
+    height: 100%;
+    width: 100%;
+    color: var(--black);
+}
+#navbar {
+    position: fixed;
+    margin: 2vh 0 2vh 0;
+    width: 30vw;
+    height: 95%;
+    grid-area: header;
+    background: var(--white);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    width: 100%;
+    margin-left: 2vw;
+}
+.nav-link {
+    color: var(--black);
+    text-decoration: none;
+    width: auto;
+    height: 5vh;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.486);
+    text-align: left;
+    font-size: 1.6vw;
+    line-height: 5vh;
+    margin: 0 1vw 0 1vw;
+}
+#link-header {
+    color: var(--black);
+    text-decoration: none;
+    width: 100%;
+    height: 5vh;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.486);
+    text-align: left;
+    font-size: 1.6vw;
+    line-height: 5vh;
+}
+#main-doc {
+    position: absolute;
+    left: 32vw;
+}
+.main-section {
+    width: 64vw;
+    height: auto;
+    background: var(--white);
+    margin-right: 1vw;
+    border-radius: 10px;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+#Introduction {
+    grid-area: no1;
+}
+#What_you_should_already_know {
+    grid-area: no2;
+}
+#JavaScript_and_Java {
+    grid-area: no3;
+}
+#Hello_world {
+    grid-area: no4;
+}
+#Variables {
+    grid-area: no5;
+}
+#Declaring_variables {
+    grid-area: no6;
+}
+#Global_variables {
+    grid-area: no7;
+}
+#Constants {
+    grid-area: no8;
+}
+#Data_types {
+    grid-area: no9;
+}
+#if_else_statement {
+    grid-area: no10;
+}
+#while_statement1 {
+    grid-area: no11;
+}
+#Function_declarations {
+    grid-area: no12;
+}
+#Reference {
+    grid-area: no13;
+    margin-bottom: 3vh;
+}
+h2 {
+    padding: 1vh 0 0 1vw;
+    font-size: 2vw;
+    font-weight: 500;
+    width: 100%;
+}
+p {
+    padding: 1vh 1vw 1vh 3vw;
+    font-size: 1.5vw;
+}
+ul {
+    font-size: 1.5vw;
+    margin-left: 3vw;
+    margin-right: 1vw;
+}
+li {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+#introduction-p {
+    margin-top: 0vh;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+#introduction-ul {
+    margin-top: 0vh;
+}
+#know-p {
+    margin-bottom: 0;
+}
+#know-ul {
+    margin-top: 0;
+}
+#java-p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+code {
+    width: 80%;
+    margin: auto;
+    margin-left: 4vh;
+    background: #d6d3d381;
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 5px;
+}
+#variables-p, #constants-p, #while-p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+label {
+    font-size: 1.5vw;
+    margin-left: 3vw;
+    margin-bottom: 0.5vh;
+}
+#globvar-code, #consants-code-2, #statement-code-5 {
+    margin-bottom: 2vh;
+}
+#globvar-p {
+    margin-top: 0;
+    padding-top: 0;
+}
+#data-p-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#data-p-2 {
+    padding-left: 0;
+}
+#data-p-3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+#data-list {
+    margin-top: 0;
+    padding-top: 0;
+}
+.statement-code {
+    margin-top: 2vh;
+}
+#statement-label-2 {
+    margin-top: 0vh;
+}
+#reference-list {
+    margin-top: 0;
+}
+#while-p-2 {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 1vh;
+    padding-bottom: 0;
+}
+#while-label-3 {
+    margin-top: 2vh;
+}
+#while-list {
+    margin-left: 2vw;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+}
+#function-list {
+    margin-top: 0vh;
+    padding-top: 0vh;
+}
+#function-p {
+    margin-bottom: 0;
+}
+@media (max-width: 500px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "no1"    
+            "no2"
+            "no3"
+            "no4"
+            "no5"
+            "no6"
+            "no7"
+            "no8"
+            "no9"
+            "no10"
+            "no11"
+            "no12"
+            "no13";
+    }
+    #navbar {
+        display: none;
+    }
+    #main-doc {
+        position: static;
+    }
+    .main-section {
+        width: 90%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
