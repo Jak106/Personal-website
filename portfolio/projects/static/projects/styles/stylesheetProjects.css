@@ -1,0 +1,144 @@
+.projects-section {
+    height: auto;
+    width: 90%;
+    margin: 5vh auto 5vh auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: center;
+}
+.projects-image {
+    grid-area: photo;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+.projects-heading {
+    grid-area: heading;
+    margin: auto 0;
+    height: auto;
+}
+.projects-text {
+    grid-area: text;
+    height: auto;
+    width: 90%;
+}
+.projects-box {
+    width: 80%;
+    height: auto;
+    background-color: var(--projectBlue);
+    color: var(--projectFont);
+    margin: 2vh auto;
+    display: grid;
+    grid-template: 
+        "photo heading" 10vh
+        "photo text" 15vh
+        /30% 70%;
+    position: relative;
+}
+#newProject {
+    grid-template:
+        "link name organization" 7vh
+        "radio text text" 15vh
+        "photo button button" 7vh
+        /30% 35% 35%;
+}
+.heading-text {
+    width: 80% ;
+    height: 4vh;
+    margin: auto 10%;
+    background-color: var(--projectBlue);
+    border: none;
+}
+.heading-text::placeholder, #heading-description::placeholder {
+    color: rgb(190, 190, 190);
+    padding: 0 1vw;
+}
+#heading-name {
+    grid-area: name;
+}
+#heading-org {
+    grid-area: organization;
+}
+#heading-description {
+    grid-area: text;
+    background-color: var(--projectBlue);
+    border: none;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
+#input-label {
+    width: 90%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#input-button {
+    grid-area: button;
+    height: 70%;
+    margin: auto;
+    width: 50%;
+}
+#img {
+    grid-area: photo;
+    margin: auto;
+    width: 80%;
+}
+.projects-box:hover {
+    text-decoration: none;
+    box-shadow: 10px 10px 15px #37207a85;
+    transition: 300ms;
+    color: var(--projectFont);
+}
+.cross {
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+}
+.project-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1vh 0;
+}
+#heading-link {
+    grid-area: link;
+}
+#new-radio {
+    grid-area: radio;
+    margin: auto;
+    width: 80%;
+}
+@media (max-width: 480px) {
+    .projects-box {
+        height: auto;
+        width: 80vw;
+        grid-template: 
+            "photo" 20vh
+            "heading" auto
+            "text" auto
+            /100%;
+    }
+    .projects-box >* {
+        width: 90%;
+        margin: auto;
+    }
+    .projects-heading {
+        word-wrap: break-word;
+    }
+    .projects-text {
+        margin: 2vh auto;
+    }
+    #newProject {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    #newProject >* {
+        height: auto;
+        margin: 1vh auto;
+    }
+}

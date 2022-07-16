@@ -1,0 +1,22 @@
+<footer>
+    <div id="links-div">
+        <a href="{% url 'home' %}" class='footer-link'><span id="unP">Home</span></a>
+        <a href="{% url 'projects' %}" class="footer-link" id="projects-link"><span id="unP">Projects</span></a>
+        <a href="#contact" class="footer-link" id="index-link"><span id="unP">Contact</span></a>
+        <a href="404.html" class="footer-link" id="copyright-link"><span id="unP">Copyrights</span></a>
+        <a href="https://www.freecodecamp.org/fccbaed329d-df71-47e0-8b53-07ca241e1454" class="footer-link" id="certificates-link"><span id="unP">Certificates</span></a>
+        <a href="index_slovak.html" class="footer-link" id="language"><span id="unP">Slovensky</span></a>
+    </div>
+    <form id="login-form" method='POST'>{% csrf_token %}
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="footer-link" id="logout"><span id="unP">Logout</span></a>
+        {% else %}
+            <input class="login-input" name='username' type='text' placeholder="Name"/>
+            <input class="login-input" name='password' type='password' placeholder="Password"/>
+            {% if error %}
+                <p id="error">Wrong name or password</p>
+            {% endif %}
+            <button id="login-btn" type='submit'>Login</button>
+        {% endif %}
+    </form>
+</footer>

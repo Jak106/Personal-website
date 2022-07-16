@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheetLink %}
+    <link rel="stylesheet" href="{% static 'home/styles/stylesheetHome.css' %}">
+    <title>Home</title>
+{% endblock %}
+{% block body %}
+    <div id="transition" style="background-image: url({% static 'home/images/transition.jpg' %})"></div>
+    <div id="welcome-section">
+        <section id="welcome-wrap">
+            <h1 class="welcome" id="welcome-1">Jakub</h1>
+            <h1 class="welcome" id="welcome-2">Jakub</h1>
+        </section>
+    </div>
+    <div class="part" id="intro">
+        <p id="intro-p">I am just student with his dreams looking for a job.</p>
+        <img src="{% static 'home/images/coder_picture.jpg' %}" id="intro-img" class="img-fluid">
+        <p id="intro-text">I am a student from Slovakia. My current place of study is secondary bilingual school in Cadca Slovakia. My interests are computers, cybersecurity and web development.<br>
+            <br>
+            I am in fourth year of five year study. My head is full of ideas for websites and other projects. Only thing I am missing is people to do it for. That is why I created this website. I want to show what I am capable of to other people. If you are looking for someone who can make your website look professional – it is me. Just check my project section to see my works. If you want to, my certificates are available for you to check as well.<br>
+            <br>
+            Some may think that I lack experience. It is quite understandable, but not really true. I participated in many works regarding other branches of informatics. I spent my time in python, javascript, arduino and couple of others. I created robot which was capable of navigating itself in complicated terrain. Another thing I created is a robotic arm. I created my own parts for it using Fusion 360. After that I printed them and put it all together. As I am thinking about it, this was where my informatics journey started. If you got this far I am glad, and I would be even more happy if you contacted me as well
+        </p>
+    </div>
+    <div class="part" id="contact">
+        <img class="contact-icon" id="gmail-icon" src="{% static 'home/images/iconmonstr-gmail-3.svg' %}" alt="Gmail icon">
+        <label for="gmail-icon" id="gmail-text" class="contact-text"><span id="unB">jakubzuber2004@gmail.com</span></label>
+        
+        <img class="contact-icon" id="phone-icon" src="{% static 'home/images/iconmonstr-smartphone-3.svg' %}" alt="Phone icon">
+        <label for="phone-icon" class="contact-text" id="phone-text">+421 903 166 096</label>
+        
+        <img class="contact-icon" id="linkedin-icon" src="{% static 'home/images/iconmonstr-linkedin-3.svg' %}" alt="linkedin icon">
+        <label for="linkedin-icon"><a href="https://www.linkedin.com/in/jakub-jan-zuber" class="contact-text" id="linkedin-text" target="_blank"><span id="unB">My Linkedin profile</span></a></label>
+        
+        <img class="contact-icon" id="certificate-icon" src="{% static 'home/images/iconmonstr-certificate-7.svg' %}" alt="Certificate icon">
+        <label for="certificate-icon"><a href="https://www.freecodecamp.org/fccbaed329d-df71-47e0-8b53-07ca241e1454" class="contact-text" id="certificate-text" target="_blank"><span id="unB">My certificates</span></a></label>
+    
+    </div>
+    {% include 'footer.html' %}
+{% endblock %}

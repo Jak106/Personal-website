@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheetLink %}
+    <link rel="stylesheet" href="{% static 'projects/styles/stylesheetProjects.css' %}">
+    <title>Projects</title>
+{% endblock %}
+{% block style %}
+    body {
+        background: var(--blue);
+        background-repeat: no-repeat;
+    }
+{% endblock %}
+{% block body %}
+    <section class="projects-section">
+        {% for project in projects %}
+            <div class="project-div">
+                {% if project.linkType == 'E' %}
+                    <a href="https://{{ project.link }}" class="projects-box rounded" target="_blank">
+                {% else %}
+                    <a href="{% url project.link %}" class="projects-box rounded" target="_blank">
+                {% endif%}
+                    <img src="{{ project.get_absolute_image }}" class="projects-image img-fluid rounded">
+                    <h2 class="projects-heading"><span id="unB">{{ project.name }} | {{ project.organization }}</span></h2>
+                    <p class="projects-text">{{ project.description }}</p>  
+                </a>
+                {% if user.is_authenticated %}
+                <a href="delete/{{ project.id }}" class="project-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="red" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+                {% endif %}
+            </div>
+        {% endfor %}
+        {% if user.is_authenticated %}
+        <form method="POST" enctype="multipart/form-data" class="projects-box rounded" id="newProject">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit" id="input-button" class="btn btn-primary">
+        </form>
+        {% endif %}
+        {% comment %}{% endif %}{% endcomment %}
+        <!--<a href="projects/sealsIntro.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/spc.png' %}" class="projects-part-image">
+                <h1 class="projects-part-heading"><span id="unB">Seals price counter | Leader Gasket Technologies Slovakia</span></h1>
+                <p class="projects-part-text">This software was done in cooperation for company Leader Gasket Slovakia which specializes in seals production. Main goal of this software is to count prices of seals based on size and price of used materials.</p>
+            </article>
+        </a>
+        <a href="projects/tribute_page.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/tribute_page_overview.png' %}" class="projects-part-image" id="tribute-image">
+                <h1 class="projects-part-heading"><span id="unB">Tribute page | FreeCodeCamp course</span></h1>
+                <p class="projects-part-text">This was my first projects which I created for certificate. 
+                    <br>It uses media queries for diffferent screen sizes so that it is optimzed for best user experience. I used simple layout with few colors and picture to show beauty in simplicity. </p>
+            </article>
+        </a>
+        <a href="projects/survey_page.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/survey_page_overview.png' %}" class="projects-part-image">
+                <h1 class="projects-part-heading"><span id="unB">Survey page | FreeCodeCamp course</span></h1>
+                <p class="projects-part-text">Another project in my portfolio is this short survey. It automatically checks if input data is correct. Layout is same for smartphone as well as computer screen. This project is used to show my capability to create forms.</p>
+            </article>
+        </a>
+        <a href="projects/landing_page.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/landing_page_overview.png' %}" class="projects-part-image">
+                <h1 class="projects-part-heading"><span id="unB">Landing page | FreeCodeCamp course</span></h1>
+                <p class="projects-part-text">This project's aim was to show my ability to work with video. It also includes form and simple animations of links and button.</p>
+            </article>
+        </a>
+        <a href="projects/technical_documentation.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/technical_page_overview.png' %}" class="projects-part-image">
+                <h1 class="projects-part-heading"><span id="unB">Technical documentation page | FreeCodeCamp course</span></h1>
+                <p class="projects-part-text">Technical documentation is guide to Javascript. I used design composed of two basic parts. Navigational bar on the left side and on the right side are scrollable lessons.</p>
+            </article>
+        </a>
+        <a href="projects/FCC_personal_portfolio_page.html" class="projects-link" target="_blank">
+            <article class="project-part">
+                <img src="{% static 'projects/images/FFC_personal_portfolio_overview.png' %}" class="projects-part-image">
+                <h1 class="projects-part-heading"><span id="unB">FCC personal portfolio page | FreeCodeCamp course</span></h1>
+                <p class="projects-part-text">This is my personal portfolio site which i created for certificate as well.</p>
+            </article>
+        </a>-->
+    </section>
+    {% include 'footer.html' %}
+{% endblock %}
