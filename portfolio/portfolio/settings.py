@@ -24,7 +24,9 @@ SECRET_KEY = 'django-insecure-_ovp!u-e9yd9e4w#p5_g(%mkm6g*zn)b*6q&8w5o%17$^a^mel
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'clownfish-app-iqvof.ondigitalocean.app'
+]
 
 # Application definition
 
