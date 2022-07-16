@@ -14,7 +14,7 @@ letterList.forEach(letter => {
     letterPara.addEventListener("click", (e) => {
         if (word.includes(letter)) {
             while (word.includes(letter)) {
-                guessed = guessPara.innerHTML      
+                var guessed = guessPara.innerHTML      
                 guessed = guessed.split(" ")
                 guessed[word.indexOf(letter)] = letter
                 word[word.indexOf(letter)] = "_"
@@ -55,16 +55,13 @@ letterList.forEach(letter => {
                     break;
             }
             badTry -= 1
-            if (badTry <= 0 ) {
-                tries.innerHTML = "You have no tries left"
-            } else {
-                tries.innerHTML = "You have " + String(badTry) + " chances left"
-            }
-            guessed = guessPara.innerHTML 
-            if (guessed.includes("_") == false) {
-                console.log(guessed)
-                tries.innerHTML = "You guessed the word"
-            }
+        }
+        var guessed = guessPara.innerHTML
+        console.log(guessed)
+        console.log(guessed.includes("_") == false)
+        if (guessed.includes("_") == false) {
+            console.log(guessed)
+            tries.innerHTML = "You guessed the word"
         }
         changeStyle(e.target)
     })
