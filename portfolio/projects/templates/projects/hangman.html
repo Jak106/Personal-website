@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>Hangman</title>
+    <link rel="stylesheet" href="{% static 'projects/styles/hangman.css' %}">
+</head>
+<body>
+    <h1>Hangman</h1>
+    <h3 id="category"></h3>
+    <div id="letters-div"></div>
+    <h2>Guess your word:</h2>
+    <h2 id="guess"></h2>
+    <canvas id="cvs">
+        Your browser does not support the canvas tag.
+    </canvas>
+    <h2 id="tries">You have 10 chances left</h2>
+    <script src="{% static 'projects/script/hangman.js' %}"></script>
+</body>

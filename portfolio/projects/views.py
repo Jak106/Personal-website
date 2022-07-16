@@ -42,3 +42,5 @@ def deleteProject_view(request, id):
 def spc_view(request):
     return render(request, 'projects/spc.html', {})
 
+def hangman_view(request):
+    return render(request, 'projects/hangman.html', {})

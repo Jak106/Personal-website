@@ -20,7 +20,7 @@
                     <a href="{% url project.link %}" class="projects-box rounded" target="_blank">
                 {% endif%}
                     <img src="{{ project.get_absolute_image }}" class="projects-image img-fluid rounded">
-                    <h2 class="projects-heading"><span id="unB">{{ project.name }} | {{ project.organization }}</span></h2>
+                    <h2 class="projects-heading"><span id="unB">{{ project.name }} {% if project.organization %}| {{ project.organization }}{% endif %}</span></h2>
                     <p class="projects-text">{{ project.description }}</p>  
                 </a>
                 {% if user.is_authenticated %}

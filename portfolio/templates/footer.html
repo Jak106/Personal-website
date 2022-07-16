@@ -2,10 +2,10 @@
     <div id="links-div">
         <a href="{% url 'home' %}" class='footer-link'><span id="unP">Home</span></a>
         <a href="{% url 'projects' %}" class="footer-link" id="projects-link"><span id="unP">Projects</span></a>
-        <a href="#contact" class="footer-link" id="index-link"><span id="unP">Contact</span></a>
-        <a href="404.html" class="footer-link" id="copyright-link"><span id="unP">Copyrights</span></a>
+        <a href="{% url 'home' %}#contact" class="footer-link" id="index-link"><span id="unP">Contact</span></a>
+        {% comment %}<a href="404.html" class="footer-link" id="copyright-link"><span id="unP">Copyrights</span></a>
         <a href="https://www.freecodecamp.org/fccbaed329d-df71-47e0-8b53-07ca241e1454" class="footer-link" id="certificates-link"><span id="unP">Certificates</span></a>
-        <a href="index_slovak.html" class="footer-link" id="language"><span id="unP">Slovensky</span></a>
+        <a href="index_slovak.html" class="footer-link" id="language"><span id="unP">Slovensky</span></a>{% endcomment %}
     </div>
     <form id="login-form" method='POST'>{% csrf_token %}
         {% if user.is_authenticated %}

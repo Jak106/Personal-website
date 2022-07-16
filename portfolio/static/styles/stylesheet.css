@@ -34,13 +34,13 @@ footer {
     align-items: center;
     flex-flow: row wrap;
     justify-content: center;
+    column-gap: 15vw;
 }
 .footer-link, 
 .footer-link:visited {
     text-decoration: none;
     color: var(--blue);
     font-size: 1.5em max(70%);
-    margin: auto;
 }
 #login-form {
     display: flex;
@@ -103,16 +103,15 @@ footer {
         font-size: 1.1em;
         height: auto;
         padding: 3vh 0;
+        column-gap: 0;
     }
     footer >* {
         flex-direction: column;
     }
     .footer-link {
         height: auto;
-        width: 40%;
-    }
-    .footer-link:nth-child(odd) {
-        margin-left: 10%;
+        width: 100%;
+        text-align: center;
     }
     #login-form {
         margin: 5vh auto auto 20%;

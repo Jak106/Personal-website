@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-_ovp!u-e9yd9e4w#p5_g(%mkm6g*zn)b*6q&8w5o%17$^a^mel
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'clownfish-app-iqvof.ondigitalocean.app'
+    'clownfish-app-iqvof.ondigitalocean.app',
+    'localhost'
 ]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,9 +121,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    #BASE_DIR / "static",
+    BASE_DIR / "static",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
