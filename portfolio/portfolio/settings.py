@@ -26,7 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'clownfish-app-iqvof.ondigitalocean.app',
-    'localhost'
+    'localhost',
+    'jakubdeveloper.com',
 ]
 
 # Application definition
