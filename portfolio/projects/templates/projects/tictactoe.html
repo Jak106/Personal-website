@@ -1,8 +1,12 @@
-{% block stylesheetLink %}
-  <link rel="stylesheet" href="tictactoe.css">
-  <title>Tic Tac Toe</title>
-{% endblock %}
-{% block body %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="{% static 'projects/styles/tictactoe.css' %}">
+  </head>
+  <body>
     <h1>Tic Tac Toe</h1>
     <main>
       <p id="warning"></p>
@@ -42,7 +46,55 @@
         </tr>
       </table>
     </main>
-{% endblock %}
-{% block script %}
-  <script src="tictactoe.js"></script>
-{% endblock %}
+    <footer></footer>
+    <script src="{% static 'projects/script/tictactoe.js' %}"></script>
+    <script>
+      function ticMove() {
+        var empty = emptyFields()
+        checkWinPattern(contentFields("o"))
+        if (game) {
+            if (empty.length != 0) {
+                var field = Math.round(Math.random()*10)
+
+                var availPattern = checkPattern(contentFields("x"))
+                var defeat = checkPattern(contentFields("o"))
+                
+                if (availPattern.length != 0) {
+                    document.getElementById(String.fromCharCode(availPattern[0][0], availPattern[0][1])).innerHTML = "x"
+                    document.getElementById(String.fromCharCode(availPattern[0][0], availPattern[0][1])).style.backgroundImage = ```url('{% static "projects/images/iconmonstr-x-mark-lined-240.png" %}')```
+                } else if (defeat.length != 0) {
+                    document.getElementById(String.fromCharCode(defeat[0][0], defeat[0][1])).innerHTML = "x"
+                    document.getElementById(String.fromCharCode(defeat[0][0], defeat[0][1])).style.backgroundImage = ```url('{% static "projects/images/iconmonstr-x-mark-lined-240.png" %}')```
+                } else if (nextTicMove === 0) {
+                    while (field >= empty.length) {
+                        field = Math.round(Math.random()*10)
+                    }
+                    document.getElementById(String.fromCharCode(empty[field][0], empty[field][1])).innerHTML = "x"
+                    document.getElementById(String.fromCharCode(empty[field][0], empty[field][1])).style.backgroundImage = ```url('{% static "projects/images/iconmonstr-x-mark-lined-240.png" %}')```
+                }
+            } else {
+                warning.innerHTML = "No fields left"
+            }
+            checkWinPattern(contentFields("x"))
+        }
+    }
+
+    for (var x = 0; x < td.length; x++) {
+        td[x].addEventListener("click", (e) => {
+            //checkWinPattern(contentFields("x"))
+            if (game) {
+                if (e.target.innerHTML != "x" && e.target.innerHTML != "o" ) {
+                    warning.innerHTML = ""
+                    e.target.innerHTML = "o"
+                    e.target.style.backgroundImage = ```url("{% static 'projects/images/iconmonstr-circle-lined-240.png' %}")```
+                } else {
+                    warning.innerHTML = "already selected"
+                }
+            }
+            ticMove()
+        })
+    }
+
+    </script>
+  </body>
+</html>
