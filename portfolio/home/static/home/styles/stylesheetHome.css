@@ -4,9 +4,26 @@
     margin: 0 auto 0 auto;
     padding: 0%;
     display: flex;
+    flex-direction: column;
     z-index: 2;
     background-color: var(--backCol);
 }
+
+#arrow-down {
+    width: 4vw;
+    margin: 0 auto;
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+    transform-origin: bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
 ::-webkit-scrollbar {
     width: 1em;
     z-index: 3;

@@ -1,0 +1,48 @@
+{% block stylesheetLink %}
+  <link rel="stylesheet" href="tictactoe.css">
+  <title>Tic Tac Toe</title>
+{% endblock %}
+{% block body %}
+    <h1>Tic Tac Toe</h1>
+    <main>
+      <p id="warning"></p>
+      <table cellspacing="0">
+        <tr>
+          <td class="place a A" id="aA">
+
+          </td>
+          <td class="place a B" id="aB">
+
+          </td>
+          <td class="place a C" id="aC">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="place b A" id="bA">
+
+          </td>
+          <td class="place b B" id="bB">
+
+          </td>
+          <td class="place b C" id="bC">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="place c A" id="cA">
+          
+          </td>
+          <td class="place c B" id="cB">
+
+          </td>
+          <td class="place c C" id="cC">
+
+          </td>
+        </tr>
+      </table>
+    </main>
+{% endblock %}
+{% block script %}
+  <script src="tictactoe.js"></script>
+{% endblock %}

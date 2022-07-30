@@ -44,3 +44,6 @@ def spc_view(request):
 
 def hangman_view(request):
     return render(request, 'projects/hangman.html', {})
+
+def tictactoe_view(request):
+    return render(request, 'projects/tictactoe.html', {})

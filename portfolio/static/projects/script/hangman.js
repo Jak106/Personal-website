@@ -12,13 +12,13 @@ letterList.forEach(letter => {
     letterPara = document.createElement("p")
     letterPara.innerHTML = letter
     letterPara.addEventListener("click", (e) => {
-        if (word.includes(letter)) {
+        if (word.includes(letter) == true) {
+            console.log("good try")
             while (word.includes(letter)) {
-                var guessed = guessPara.innerHTML      
+                var guessed = guessPara.innerHTML    
                 guessed = guessed.split(" ")
                 guessed[word.indexOf(letter)] = letter
                 word[word.indexOf(letter)] = "_"
-                console.log(guessed)
                 guessPara.innerHTML = guessed.join(' ')
             }
         } else {
@@ -55,12 +55,10 @@ letterList.forEach(letter => {
                     break;
             }
             badTry -= 1
+            tries.innerHTML = "You have " + badTry + " tries left"
         }
         var guessed = guessPara.innerHTML
-        console.log(guessed)
-        console.log(guessed.includes("_") == false)
         if (guessed.includes("_") == false) {
-            console.log(guessed)
             tries.innerHTML = "You guessed the word"
         }
         changeStyle(e.target)
@@ -120,5 +118,4 @@ circle = function() {
 function changeStyle(elem) {
     elem.style.background = "black"
     elem.style.color = "white"
-    //console.log(elem)
 }
