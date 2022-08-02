@@ -91,7 +91,6 @@ function checkWinPattern(arr) {
         for (var x = 0; x < arr.length-2; x++) {
             for (var y = x+1; y < arr.length-1; y++) {
                 for (var z = y+1; z < arr.length; z++) {
-                    console.log(arr[x], arr[x+1], arr[x+2])
                     var x1 = arr[x][0], y1 = arr[x][1];
                     var x2 = arr[y][0], y2 = arr[y][1];
                     var x3 = arr[z][0], y3 = arr[z][1];
@@ -119,13 +118,9 @@ function checkWinPattern(arr) {
                     } else if (x1+1 == x2 && x1+2 == x3 && y1-1 == y2 && y1-2 == y3) {
                         warning.innerHTML = "Game won"
                         game = false
-                    } else {
-                        console.log("no win")
-                       
                     }
                 }
             }
-            
         }
     }
 }
