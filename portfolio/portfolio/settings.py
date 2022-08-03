@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_ovp!u-e9yd9e4w#p5_g(%mkm6g*zn)b*6q&8w5o%17$^a^mel'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'clownfish-app-iqvof.ondigitalocean.app',
@@ -121,9 +121,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-#    BASE_DIR / "static",
+    BASE_DIR / "static",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
 
 MEDIA_URL = 'media/'
