@@ -47,3 +47,4 @@ def hangman_view(request):
 
 def tictactoe_view(request):
     return render(request, 'projects/tictactoe.html', {})
+    
