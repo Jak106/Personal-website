@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>Euroscola</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'projects/styles/euroschool.css' %}">
+</head>
+<style>
+    .ground {
+        background-image: url("{% static 'projects/images/Flag_of_Europe.png' %}");
+        padding-bottom: 20px;
+    }
+    .flag {
+        position: relative;
+        display: inline-block;
+        margin-left: 7vw;
+        width: 120px;
+        height: 120px;
+        border: 1px solid #bbb;
+        border-left-color: white;
+        box-sizing: border-box;
+        box-shadow: 2px 5px 14px 0px rgba(0,0,0,0.4);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-transform-style: preserve3d;
+        -webkit-transform-origin: 0 250px;
+        -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(-22deg);
+        -webkit-animation-name: wave;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-timing-function: cubic-bezier(.16,.14,.82,.73);
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+    }
+    .flag:nth-child(odd) {
+        -webkit-animation-delay: 1s;
+    }
+    .flag:before {
+        position: absolute;
+        content: "";
+        height: 240px;
+        left: -5px;
+        top: -3px;
+        width: 6px;
+        border-right: 1px solid white;
+        border-radius: 3px;
+        background-color: #444;
+        box-shadow: -3px 3px 8px 0px rgba(0,0,0,0.4);
+    }
+    .flag.rect {
+        width: 168px;
+    }
+    .flag-pattern {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        -webkit-box-reflect: below 60px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(70%,transparent),to(rgba(255,255,255,0.05)));
+    }
+    .flag-pattern.us {
+        background-color: transparent;
+        background-image: url("{% static 'projects/images/Flag_of_Europe.png' %}");
+        background-size: 100% 100%;
+        background-repeat: repeat-y;
+    }
+    .flag-pattern.us:before,
+    .flag-pattern.us:after {
+        position: absolute;
+        max-width: 100%;
+        overflow: hidden;
+        word-break: break-word;
+        text-align: center;
+    }
+    .flag-pattern.us:before {
+        background-color: transparent;
+        border-left: 3px solid blue;
+    }
+    .flag-pattern.us:after {
+        box-sizing: border-box;
+        margin-left: 3px;
+        padding: .9em 1em;
+    }
+    .flag-wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-gradient(linear,0 -25%,100% top,color-stop(0%,rgba(255,255,255,0)),color-stop(20%,rgba(255,255,255,0)),color-stop(30%,rgba(0,0,0,0.04)),color-stop(40%,rgba(255,255,255,0.2)),color-stop(60%,rgba(255,255,255,0)),color-stop(65%,rgba(255,255,255,0.2)),color-stop(80%,rgba(0,0,0,0.05)),color-stop(100%,rgba(255,255,255,0)));
+        background-size: 200%;
+        -webkit-animation-name: flutter;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-timing-function: cubic-bezier(.16,.14,.82,.73);
+        -webkit-animation-iteration-count: infinite;
+    }
+    @-webkit-keyframes flutter {
+        0% {
+            background-position: -200% 0px;
+        }
+        30% {
+            background-position: -60% 5px;
+        }
+        70% {
+            background-position: 70% -5px;
+        }
+        100% {
+            background-position: 200% 0px;
+        }
+    }
+    @-webkit-keyframes wave {
+        0% {
+            box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1);
+            -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(22deg);
+        }
+        20% {
+            box-shadow: 4px 5px 15px 0 rgba(0,0,0,0.1);
+            -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(0deg);
+        }
+        40% {
+            box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.4);
+            -webkit-transform: translate3d(0,0,0) rotateZ(6deg) rotateY(-22deg);
+        }
+        60% {
+            box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1);
+            -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(0deg);
+        }
+        80% {
+            box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.3);
+            -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(16deg);
+        }
+        100% {
+            box-shadow: 4px 5px 5px 0 rgba(0,0,0,0.1);
+            -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(22deg);
+        }
+    }
+</style>
+<body>
+    <header class="show">
+        <a href="#opening"><img class="statusIcon" src="{% static 'projects/images/intro-icon.png' %}"></a>
+        <a href="#aboutUs">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-person statusIcon" viewBox="0 0 16 16">
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+            </svg>
+        </a>
+        <a href="#aboutProjects">
+            <img class="statusIcon" src="{% static 'projects/images/projects.png' %}">
+        </a>
+        <a href="#projects">
+            <img class="statusIcon" src="{% static 'projects/images/archive.png' %}">
+        </a>
+        <a href="#footer">
+            <img class="statusIcon" src="{% static 'projects/images/rename.png' %}">
+        </a>
+        <div id="statusBarBCG"></div>
+        <div id="statusBarFW"></div>
+    </header>
+    <section id="opening">
+        <img class="img-fluid" id="openingBCG" src="{% static 'projects/images/ecologyBCG.jpg' %}">
+        <h1 id="h1activity">Euroscola 2022</h1>
+        <h2 id="h2school">GJMH</h2>
+        <div class="flag rect">
+            <div class="flag-pattern us"></div>
+            <div class="flag-wave"></div>
+        </div>
+    </section>
+    <section id="aboutUs">
+        <div id="square"></div>
+        <div class="person-div">
+            <img class="img-fluid aboutUs-img" id="img-turzova" src="{% static 'projects/images/turzova.jpeg' %}">
+            <h1 class="name">Andrea Turzová</h1>
+            <p id="p-turzova">Projekt Euroscola je jedným zo skvelých spôsobov ako mladí ľudia môžu prejaviť svoju tvorivosť a ako posunúť informácie ďalej. Ekológia a životné prostredie sú témy, ktoré sa týkajú každého jedného z nás.</p>
+        </div>
+        <div class="person-div">
+            <img class="img-fluid aboutUs-img" id="img-turzova" src="{% static 'projects/images/tisonova.jpeg' %}">
+            <h1 class="name">Laura Tisoňová</h1>
+            <p id="p-turzova">O environmentálnu tému sa zaujímam už pár rokov. Snažím sa rozprávať o tejto téme s mojím okolím, a preto som využila túto príležitosť zapojiť sa do projektu Euroscola a edukovať tak mladých ľudí.</p>
+        </div>
+        <div class="person-div">
+            <img class="img-fluid aboutUs-img" id="img-jamecna" src="{% static 'projects/images/jamecna.jpeg' %}">
+            <h1 class="name">Natalia Jamečná</h1>
+            <p id="p-jamecna">Volám sa Natália a do projektu som sa zapojila skrz snahu ozvláštniť študentom stereotypné vzdelávanie a zároveň im ponúknuť náhľad do toho akú významnú rolu EU hrá v našich životoch</p>
+        </div>
+        <div class="person-div">
+            <img class="img-fluid aboutUs-img" id="img-zuber" src="{% static 'projects/images/zuber.jpg' %}">
+            <h1 class="name">Jakub Zuber</h1>
+            <p id="p-zuber">Som Jakub a mám rád informatiku. Keď som počul o projekte euroškola, dlho som rozmýšľal ako možem práve ja pomôcť. Preto som sa rozhodol použit svoje znalosti z informatiky pre internetovú propagáciu a technickej podpore projektu.</p>
+        </div>
+    </section>
+    <section id="aboutProjects">
+        <div id="gallery">
+            <img id="photo1" style="grid-area: img1;" class="img-fluid">
+            <img id="photo2" style="grid-area: img2;" class="img-fluid">
+            <img id="photo3" style="grid-area: img3;" class="img-fluid">
+            <img id="photo4" style="grid-area: img4;" class="img-fluid">
+            <img id="photo5" style="grid-area: img5;" class="img-fluid">
+            <img id="photo6" style="grid-area: img6;" class="img-fluid">
+            <img id="photo7" style="grid-area: img7;" class="img-fluid">
+            <img id="photo8" style="grid-area: img8;" class="img-fluid">
+            <img id="photo9" style="grid-area: img9;" class="img-fluid">
+            <img id="photo10" style="grid-area: img10;" class="img-fluid">
+            <img id="photo11" style="grid-area: img11;" class="img-fluid">
+            <img id="photo12" style="grid-area: img12;" class="img-fluid">
+            <img id="photo13" style="grid-area: img13;" class="img-fluid">
+            <img id="photo14" style="grid-area: img14;" class="img-fluid">
+            <img id="photo15" style="grid-area: img15;" class="img-fluid">
+            <img id="photo16" style="grid-area: img16;" class="img-fluid">
+            <img id="photo17" style="grid-area: img17;" class="img-fluid">
+            <img id="photo18" style="grid-area: img18;" class="img-fluid">
+            <img id="photo19" style="grid-area: img19;" class="img-fluid">
+            <img id="photo20" style="grid-area: img20;" class="img-fluid">
+            <img id="photo21" style="grid-area: img21;" class="img-fluid">
+        </div>
+        {% comment %}
+        <div id="imgText">
+            <label for="photo1" class="img-label" id="label1">- Img 1</label>
+            <label for="photo2" class="img-label" id="label2">- Img 2</label>
+            <label for="photo3" class="img-label" id="label3">- Img 3</label>
+            <label for="photo4" class="img-label" id="label4">- Img 4</label>
+            <label for="photo5" class="img-label" id="label5">- Img 5</label>
+            <label for="photo6" class="img-label" id="label6">- Img 6</label>
+            <label for="photo7" class="img-label" id="label7">- Img 7</label>
+            <label for="photo8" class="img-label" id="label8">- Img 8</label>
+            <label for="photo9" class="img-label" id="label9">- Img 9</label>
+            <label for="photo10" class="img-label" id="label10">- Img 10</label>
+            <label for="photo11" class="img-label" id="label11">- Img 11</label>
+            <label for="photo12" class="img-label" id="label12">- Img 12</label>
+            <label for="photo13" class="img-label" id="label13">- Img 13</label>
+            <label for="photo14" class="img-label" id="label14">- Img 14</label>
+            <label for="photo15" class="img-label" id="label15">- Img 15</label>
+            <label for="photo16" class="img-label" id="label16">- Img 16</label>
+            <label for="photo17" class="img-label" id="label17">- Img 17</label>
+            <label for="photo18" class="img-label" id="label18">- Img 18</label>
+            <label for="photo19" class="img-label" id="label19">- Img 19</label>
+            <label for="photo20" class="img-label" id="label20">- Img 20</label>
+            <label for="photo21" class="img-label" id="label21">- Img 21</label>
+        </div>
+        {% endcomment %}
+    </section>
+    <section id="projects">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+        <input type="radio" name="slider" id="item-4">
+        <input type="radio" name="slider" id="item-5">
+        <input type="radio" name="slider" id="item-6">
+        <input type="radio" name="slider" id="item-7">
+        <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+            <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+            <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+            </label>
+            <label class="card" for="item-4" id="song-4">
+                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+            </label>
+            <label class="card" for="item-5" id="song-5">
+                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+            </label>
+            <label class="card" for="item-6" id="song-6">
+                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+            </label>
+            <label class="card" for="item-7" id="song-7">
+                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+            </label>
+        </div>
+        <div id="projects-info">
+            <label for="item-1" id="label1">
+                HELLO WORLD
+            </label>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="big-div">
+            <h2>Sitemap</h2>
+            <div id="links" class="content-div">
+                <a href="#opening">Úvod</a>
+                <a href="#aboutUs">O nás</a>
+                <a href="#aboutProjects">Galéria</a>
+                <a href="#projects">Projekty</a>
+                <a href="#footer">Päta</a>
+            </div>
+        </div>
+        <div id="contact-big-div" class="big-div">
+            <h2>Kontakt</h2>
+            <div id="contacts" class="content-div">
+                
+                <img src="{% static 'projects/images/gymo-logo.png' %}" id="contacts-logo">
+                
+                <p>Gymnázium Jozefa Miloslava Hurbana</p>
+                <p>17. novembra 1296</p>
+                <p>022 01 Čadca</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'projects/script/euroschool.js' %}"></script>
+</body>
