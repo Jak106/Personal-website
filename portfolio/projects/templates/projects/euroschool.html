@@ -135,6 +135,14 @@
             -webkit-transform: translate3d(0,0,0) rotateZ(5deg) rotateY(22deg);
         }
     }
+    @media (max-width: 480px) {
+        .flag {
+            overflow: hidden;
+        }
+        /*.flag, .flag >* {
+            display: none;
+        }*/
+    }
 </style>
 <body>
     <header class="show">
@@ -213,8 +221,7 @@
             <img id="photo20" style="grid-area: img20;" class="img-fluid">
             <img id="photo21" style="grid-area: img21;" class="img-fluid">
         </div>
-        {% comment %}
-        <div id="imgText">
+        <!--<div id="imgText">
             <label for="photo1" class="img-label" id="label1">- Img 1</label>
             <label for="photo2" class="img-label" id="label2">- Img 2</label>
             <label for="photo3" class="img-label" id="label3">- Img 3</label>
@@ -236,8 +243,7 @@
             <label for="photo19" class="img-label" id="label19">- Img 19</label>
             <label for="photo20" class="img-label" id="label20">- Img 20</label>
             <label for="photo21" class="img-label" id="label21">- Img 21</label>
-        </div>
-        {% endcomment %}
+        </div>-->
     </section>
     <section id="projects">
         <input type="radio" name="slider" id="item-1" checked>
@@ -291,8 +297,8 @@
             <h2>Kontakt</h2>
             <div id="contacts" class="content-div">
                 
-                <img src="{% static 'projects/images/gymo-logo.png' %}" id="contacts-logo">
-                
+                <img src="{% static 'projects/images/gymo-logo.png' %}" id="contacts-logo" class="img-fluid">
+               
                 <p>Gymnázium Jozefa Miloslava Hurbana</p>
                 <p>17. novembra 1296</p>
                 <p>022 01 Čadca</p>

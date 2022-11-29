@@ -325,7 +325,6 @@ img {
     box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
 #projects-info {
-    border: solid white 1px;
     width: 30vw;
     height: 90vh;
 }
@@ -393,4 +392,126 @@ footer {
 #contacts p {
     width: auto;
     margin: 0;
+}
+@media (max-width: 480px) {
+    body {
+        width: 99vw;
+        max-width: 99vw;
+        overflow-x: hidden;
+    }
+    * {
+        overflow-x: hidden;
+    }
+    header {
+        width: 99vw;
+        margin: auto;
+    }
+    #opening h1, #opening h2 {
+        font-size: 3.5em;
+        overflow: hidden;
+    }
+    #opening {
+        max-width: 99vw;
+    }
+    #openingBCG {
+        height: 100vw;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+    }
+    #aboutUs {
+        flex-direction: row;
+        margin: 0;
+        width: 100vw;
+    }
+    #square {
+        width: 6vh;
+        height: 6vh;
+        transform: rotate(45deg);
+        left: 45%;
+    }
+    .person-div {
+        padding: 1vh 0;
+        width: 93%;
+        max-height: 20vh;
+        margin: 2vh auto;
+        display: grid;
+        grid-template: 
+            "img heading" 10%
+            "img txt" 90%
+            /20% 80%;
+    }
+    #aboutUs:nth-child(2) {
+        margin-top: 10vh;
+    }
+    .person-div >* {
+        margin: 0;
+    }
+    .person-div img {
+        grid-area: img;
+        margin: auto;
+        width: 20vw;
+    }
+    .person-div h1 {
+        font-size: 1em;
+        grid-area: heading;
+    }
+    .person-div p {
+        overflow-y: scroll;
+        max-height: 10vh;
+        grid-area: txt;
+        font-size: .8em;
+        line-height: 2vh;
+    }
+    #gallery {
+        width: 90%;
+        grid-template:
+        "img1 img2 img3 img4 img5" 10vh
+        "img1 img9 img3 img4 img15" 10vh
+        "img1 img9 img14 img14 img15" 10vh
+        "img17 img18 img14 img14 img15" 10vh
+        "img10 img10 img10 img10 img15 " 10vh
+        "img10 img10 img10 img10 img15" 10vh
+        "img6 img13 img8 img11 img15" 10vh
+        "img12 img13 img16 img11 img15" 10vh
+        "img12 img13 img16 img21 img15" 10vh
+        "img12 img20 img16 img19 img15" 10vh
+        "img12 img7 img16 img19 img15" 10vh
+        /18vw 18vw 18vw 18vw 18vw;
+        overflow-y: hidden;
+    }
+    #projects {
+        flex-direction: column;
+    }
+    .cards, #projects-info {
+        width: 100%;
+    }
+    .cards {
+        height: 40vh;
+    }
+    #projects-info {
+        height: 60vh;
+    }
+    .big-div {
+        width: 45%;
+    }
+    #contacts-logo {
+        width: 30vw;
+        margin: auto;
+    }
+    #contacts {
+        height: auto;
+    }
+    #contacts p {
+        height: auto;
+        margin: auto 0;
+        line-height: normal;
+    }
+    #contacts img {
+        width: 60%;
+        order: 9;
+        margin: auto 0;
+    }
+    footer h2, footer p, footer div {
+        overflow: hidden;
+    }
 }
