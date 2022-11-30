@@ -211,21 +211,37 @@ header.show {
     height: auto;
     margin: 10vh auto 10vh auto;
     display: grid;
-    grid-template:
+    /*grid-template:
         "img1 img2 img3 img4 img5 img6 img7 img8" 10vh
         "img1 img9 img3 img4 img15 img11 img12 img20" 10vh
         "img1 img9 img14 img14 img15 img16 img12 img13" 10vh
         "img17 img18 img14 img14 img15 img16 img19 img13" 10vh
         "img10 img10 img10 img10 img15 img16 img19 img13" 10vh
         "img10 img10 img10 img10 img15 img21 img19 img13" 10vh
+        /10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;*/
+    grid-template:
+        "img1 img2 img3 img4 img5 img6 img7 img8" 10vh
+        "img1 img9 img3 img4 img15 img15 img12 img20" 10vh
+        "img1 img9 img14 img14 img15 img15 img12 img13" 10vh
+        "img17 img18 img14 img14 img15 img15 img19 img13" 10vh
+        "img10 img10 img10 img10 img15 img15 img19 img13" 10vh
+        "img10 img10 img10 img10 img15 img15 img19 img13" 10vh
         /10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
 }
 #gallery img {
-    border: solid white 1px;
-    width: 90%;
-    min-height: 90%;
+    width: auto;
+    height: 90%;
     margin: auto;
     transition: transform .7s;
+}
+#photo14 {
+    max-width: 20vw;
+    max-height: 10vh;
+}
+#photo15 {
+    max-width: 20vw;
+    max-height: 50vh;
+    max-width: 90%;
 }
 #gallery img:hover {
     transform: scale(1.4);
@@ -324,12 +340,22 @@ img {
 #projects-info {
     width: 30vw;
     height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
 }
 #label1 {
     display: none;
 }
-#item-1:checked ~ #projects-info #label1 {
+#item-1:checked ~ #projects-info #label1, #item-2:checked ~ #projects-info #label2 {
     display: block;
+}
+#item-1:checked ~ #projects-info #label2 {
+    display: none;
+}
+#item-2:checked ~ #projects-info #label1 {
+    display: none;
 }
 footer {
     width: 100%;
@@ -348,7 +374,6 @@ footer {
     color: #a1bfe9;
     margin: 5vh 2vw;
 }
-
 .content-div {
     grid-area: content;
     height: auto;
@@ -460,21 +485,32 @@ footer {
         line-height: 2vh;
     }
     #gallery {
-        width: 90%;
+        height: auto;
+        max-height: none;
+        width: 96vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
         grid-template:
-        "img1 img2 img3 img4 img5" 10vh
-        "img1 img9 img3 img4 img15" 10vh
-        "img1 img9 img14 img14 img15" 10vh
-        "img17 img18 img14 img14 img15" 10vh
-        "img10 img10 img10 img10 img15 " 10vh
-        "img10 img10 img10 img10 img15" 10vh
-        "img6 img13 img8 img11 img15" 10vh
-        "img12 img13 img16 img11 img15" 10vh
-        "img12 img13 img16 img21 img15" 10vh
-        "img12 img20 img16 img19 img15" 10vh
-        "img12 img7 img16 img19 img15" 10vh
-        /18vw 18vw 18vw 18vw 18vw;
+            "img1 img2 img3 img4" 10vh
+            "img1 img9 img3 img4" 10vh
+            "img1 img9 img5 img6" 10vh
+            "img15 img15 img12 img20" 10vh
+            "img15 img15 img12 img13" 10vh
+            "img15 img15 img19 img13" 10vh
+            "img15 img15 img19 img13" 10vh
+            "img15 img15 img19 img13" 10vh
+            "img10 img10 img10 img10" 10vh
+            "img10 img10 img10 img10" 10vh
+            "img18 img14 img14 img7" 10vh
+            "img17 img14 img14 img8" 10vh
+            /24vw 24vw 24vw 24vw;
         overflow-y: hidden;
+    }
+    #photo14 {
+        max-width: 46vw;
+    }
+    #photo15 {
+        width: 15vw;
     }
     #projects {
         flex-direction: column;
@@ -486,7 +522,10 @@ footer {
         height: 40vh;
     }
     #projects-info {
-        height: 60vh;
+        margin: 5vh auto;
+        height: auto;
+        width: 90%;
+        overflow-y: hidden;
     }
     .big-div {
         width: 45%;

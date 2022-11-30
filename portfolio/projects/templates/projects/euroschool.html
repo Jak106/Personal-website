@@ -177,11 +177,6 @@
     <section id="aboutUs">
         <div id="square"></div>
         <div class="person-div">
-            <img class="img-fluid aboutUs-img" id="img-turzova" src="{% static 'projects/images/turzova.jpeg' %}">
-            <h1 class="name">Andrea Turzová</h1>
-            <p id="p-turzova">Projekt Euroscola je jedným zo skvelých spôsobov ako mladí ľudia môžu prejaviť svoju tvorivosť a ako posunúť informácie ďalej. Ekológia a životné prostredie sú témy, ktoré sa týkajú každého jedného z nás.</p>
-        </div>
-        <div class="person-div">
             <img class="img-fluid aboutUs-img" id="img-turzova" src="{% static 'projects/images/tisonova.jpeg' %}">
             <h1 class="name">Laura Tisoňová</h1>
             <p id="p-turzova">O environmentálnu tému sa zaujímam už pár rokov. Snažím sa rozprávať o tejto téme s mojím okolím, a preto som využila túto príležitosť zapojiť sa do projektu Euroscola a edukovať tak mladých ľudí.</p>
@@ -229,7 +224,7 @@
     </section>
     <section id="aboutProjects">
         <div id="gallery">
-            <img id="photo1" style="grid-area: img1;" class="img-fluid">
+            <img id="photo1" style="grid-area: img1;" class="img-fluid" src="{% static 'projects/images/photo1.jpg' %}">
             <img id="photo2" style="grid-area: img2;" class="img-fluid">
             <img id="photo3" style="grid-area: img3;" class="img-fluid">
             <img id="photo4" style="grid-area: img4;" class="img-fluid">
@@ -240,10 +235,10 @@
             <img id="photo9" style="grid-area: img9;" class="img-fluid">
             <img id="photo10" style="grid-area: img10;" class="img-fluid">
             <img id="photo11" style="grid-area: img11;" class="img-fluid">
-            <img id="photo12" style="grid-area: img12;" class="img-fluid">
+            <img id="photo12" style="grid-area: img12;" class="img-fluid" src="{% static 'projects/images/photo12.jpg' %}">
             <img id="photo13" style="grid-area: img13;" class="img-fluid">
-            <img id="photo14" style="grid-area: img14;" class="img-fluid">
-            <img id="photo15" style="grid-area: img15;" class="img-fluid">
+            <img id="photo14" style="grid-area: img14;" class="img-fluid" src="{% static 'projects/images/photo14.jpg' %}">
+            <img id="photo15" style="grid-area: img15;" class="img-fluid" src="{% static 'projects/images/photo15.jpg' %}">
             <img id="photo16" style="grid-area: img16;" class="img-fluid">
             <img id="photo17" style="grid-area: img17;" class="img-fluid">
             <img id="photo18" style="grid-area: img18;" class="img-fluid">
@@ -285,7 +280,7 @@
         <input type="radio" name="slider" id="item-7">
         <div class="cards">
             <label class="card" for="item-1" id="song-1">
-            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+            <img src="{% static 'projects/images/project1.jpg' %}" alt="song">
             </label>
             <label class="card" for="item-2" id="song-2">
             <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
@@ -307,8 +302,23 @@
             </label>
         </div>
         <div id="projects-info">
-            <label for="item-1" id="label1">
-                HELLO WORLD
+            <label for="item-1" id="label1" class="project-short">
+                <h1>Ekologické poľnohospodárstvo na Slovensku</h1>
+                <p>
+                    Naše študentky si pripravili workshop spojený s diskusiou o ekologickom poľnohospodárstve s pani Ing. Kňažkovou - bývalou predsedníčkou bio farmy Agrorozkvet. Naším študentom priblížili rôzne zaujímavé témy ako napríklad klietkové chovy,
+                    prečo je oranie a používanie pesticídov zlé alebo či kravy zvyšujú svojimi plynmi skleníkový efekt. Potom prešli na tému lokálnych produktov a bio produktov. Vieme však, že činy sú viac ako slová a tak dali študentom aj ochutnávku domácich
+                    výrobkov a tých z obchodu pre porovnanie.
+                </p>
+                <a href="{% url 'ecohosp' %}"><button type="button" class="btn btn-success">Viac o projekte</button></a>
+            </label>
+            <label for="item-2" id="label2" class="project-short">
+                <h1>Hello world 2</h1>
+                <p>
+                    Naše študentky si pripravili workshop spojený s diskusiou o ekologickom poľnohospodárstve s pani Ing. Kňažkovou - bývalou predsedníčkou bio farmy Agrorozkvet. Naším študentom priblížili rôzne zaujímavé témy ako napríklad klietkové chovy,
+                    prečo je oranie a používanie pesticídov zlé alebo či kravy zvyšujú svojimi plynmi skleníkový efekt. Potom prešli na tému lokálnych produktov a bio produktov. Vieme však, že činy sú viac ako slová a tak dali študentom aj ochutnávku domácich
+                    výrobkov a tých z obchodu pre porovnanie.    
+                </p>
+                <button type="button" class="btn btn-success">Viac o projekte</button>
             </label>
         </div>
     </section>

@@ -50,3 +50,6 @@ def tictactoe_view(request):
     
 def euroschool_view(request):
     return render(request, 'projects/euroschool.html', {})
+
+def ecohosp_view(request):
+    return render(request, 'projects/ekohosp.html', {})
