@@ -223,9 +223,9 @@ header.show {
         "img1 img2 img3 img4 img5 img6 img7 img8" 10vh
         "img1 img9 img3 img4 img15 img15 img12 img20" 10vh
         "img1 img9 img14 img14 img15 img15 img12 img13" 10vh
-        "img17 img18 img14 img14 img15 img15 img19 img13" 10vh
-        "img10 img10 img10 img10 img15 img15 img19 img13" 10vh
-        "img10 img10 img10 img10 img15 img15 img19 img13" 10vh
+        "img17 img18 img14 img14 img15 img15 img12 img13" 10vh
+        "img22 img22 img10 img10 img15 img15 img19 img19" 10vh
+        "img22 img22 img10 img10 img15 img15 img19 img19" 10vh
         /10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
 }
 #gallery img {
@@ -234,9 +234,15 @@ header.show {
     margin: auto;
     transition: transform .7s;
 }
+#photo10 {
+    height: auto;
+    width: 80%;
+    max-width: 90%;
+}
 #photo14 {
-    max-width: 20vw;
-    max-height: 10vh;
+    height: 90%;
+    max-width: 90%;
+    max-height: 90%;
 }
 #photo15 {
     max-width: 20vw;
@@ -245,6 +251,7 @@ header.show {
 }
 #gallery img:hover {
     transform: scale(1.4);
+    z-index: 99;
 }
 #imgText {
     width: 60%;
@@ -348,13 +355,10 @@ img {
 #label1 {
     display: none;
 }
-#item-1:checked ~ #projects-info #label1, #item-2:checked ~ #projects-info #label2 {
+#item-1:checked ~ #projects-info #label1, #item-2:checked ~ #projects-info #label2, #item-3:checked ~ #projects-info #label3, #item-4:checked ~ #projects-info #label4, #item-5:checked ~ #projects-info #label5, #item-6:checked ~ #projects-info #label6, #item-7:checked ~ #projects-info #label7 {
     display: block;
 }
-#item-1:checked ~ #projects-info #label2 {
-    display: none;
-}
-#item-2:checked ~ #projects-info #label1 {
+#item-1:checked ~ #projects-info .project-short:not(#label1), #item-2:checked ~ #projects-info .project-short:not(#label2), #item-3:checked ~ #projects-info .project-short:not(#label3), #item-4:checked ~ #projects-info .project-short:not(#label4), #item-5:checked ~ #projects-info .project-short:not(#label5), #item-6:checked ~ #projects-info .project-short:not(#label6), #item-7:checked ~ #projects-info .project-short:not(#label7) {
     display: none;
 }
 footer {
@@ -505,6 +509,9 @@ footer {
             "img17 img14 img14 img8" 10vh
             /24vw 24vw 24vw 24vw;
         overflow-y: hidden;
+    }
+    #gallery img {
+        max-width: 90%;
     }
     #photo14 {
         max-width: 46vw;
