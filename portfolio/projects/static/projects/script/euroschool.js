@@ -3,7 +3,6 @@ $(window).scroll(example);
 var statusBar = document.getElementById("statusBarFW")
 var prevScroll = $(window).scrollTop();
 
-
 function example() {
     var tempScrollTop = $(window).scrollTop();
 

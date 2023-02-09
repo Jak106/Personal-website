@@ -279,29 +279,21 @@
         <input type="radio" name="slider" id="item-3">
         <input type="radio" name="slider" id="item-4">
         <input type="radio" name="slider" id="item-5">
-        <input type="radio" name="slider" id="item-6">
-        <input type="radio" name="slider" id="item-7">
         <div class="cards">
             <label class="card" for="item-1" id="song-1">
-            <img src="{% static 'projects/images/project1.jpg' %}" alt="song">
+                <img src="{% static 'projects/images/project1.jpg' %}" alt="song">
             </label>
             <label class="card" for="item-2" id="song-2">
-            <img src="{% static 'projects/images/photo15.jpg' %}" alt="song">
+                <img src="{% static 'projects/images/photo15.jpg' %}" alt="song">
             </label>
             <label class="card" for="item-3" id="song-3">
-            <img src="{% static 'projects/images/sochazalohy.jpg' %}" alt="song">
+                <img src="{% static 'projects/images/sochazalohy.jpg' %}" alt="song">
             </label>
             <label class="card" for="item-4" id="song-4">
                 <img src="{% static 'projects/images/photo10.jpg' %}" alt="song">
             </label>
             <label class="card" for="item-5" id="song-5">
-                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
-            </label>
-            <label class="card" for="item-6" id="song-6">
-                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
-            </label>
-            <label class="card" for="item-7" id="song-7">
-                <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                <img src="{% static 'projects/images/imgNew.jpg' %}" alt="song">
             </label>
         </div>
         <div id="projects-info">
@@ -312,7 +304,7 @@
                     prečo je oranie a používanie pesticídov zlé alebo či kravy zvyšujú svojimi plynmi skleníkový efekt. Potom prešli na tému lokálnych produktov a bio produktov. Vieme však, že činy sú viac ako slová a tak dali študentom aj ochutnávku domácich
                     výrobkov a tých z obchodu pre porovnanie.
                 </p>
-                <a href="{% url 'ecohosp' %}"><button type="button" class="btn btn-success">Viac o projekte</button></a>
+                {% comment %}<a href="{% url 'ecohosp' %}"><button type="button" class="btn btn-success">Viac o projekte</button></a>{% endcomment %}
             </label>
             <label for="item-2" id="label2" class="project-short">
                 <h1>Swap oblečenia</h1>
@@ -349,18 +341,6 @@
                     prejav za celú skupinu na záver. Žiaci usilovne pracovali a 2 študentky, ktoré si túto aktivitu pripravili, tak vyhodnotili spoločnú prácu s oboch strán za veľmi úspešnú a prišlo, aj ku efektívnemu vzdelávaniu v oblastni klimatických zmien.    
                 </p>
             </label>
-            <label for="item-6" id="label6" class="project-short">
-                <h1></h1>
-                <p>
-               
-                </p>
-            </label>
-            <label for="item-7" id="label7" class="project-short">
-                <h1></h1>
-                <p>
-                
-                </p>
-            </label>
         </div>
     </section>
     <footer id="footer">
@@ -377,9 +357,7 @@
         <div id="contact-big-div" class="big-div">
             <h2>Kontakt</h2>
             <div id="contacts" class="content-div">
-                
                 <img src="{% static 'projects/images/gymo-logo.png' %}" id="contacts-logo" class="img-fluid">
-               
                 <p>Gymnázium Jozefa Miloslava Hurbana</p>
                 <p>17. novembra 1296</p>
                 <p>022 01 Čadca</p>

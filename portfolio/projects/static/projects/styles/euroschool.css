@@ -306,42 +306,64 @@ img {
     border-radius: 10px;
     object-fit: cover;
 }
-#item-1:checked ~ .cards #song-7, #item-2:checked ~ .cards #song-5, #item-3:checked ~ .cards #song-6, #item-4:checked ~ .cards #song-3, #item-5:checked ~ .cards #song-4, #item-6:checked ~ .cards #song-1, #item-7:checked ~ .cards #song-2 {
+/*
+#item-1:checked ~ .cards #song-5, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-1, #item-5:checked ~ .cards #song-2 {
     transform: translatex(-40%) scale(0.55);
     opacity: 0;
     z-index: 0;
 }
-#item-1:checked ~ .cards #song-5, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-7, #item-4:checked ~ .cards #song-1, #item-5:checked ~ .cards #song-6, #item-6:checked ~ .cards #song-2, #item-7:checked ~ .cards #song-4 {
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-4 {
     transform: translatex(-40%) scale(0.7);
     opacity: 0;
     z-index: 1;
 }
-#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-2, #item-5:checked ~ .cards #song-7, #item-6:checked ~ .cards #song-4, #item-7:checked ~ .cards #song-6 {
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-2, #item-5:checked ~ .cards #song-7 {
     transform: translatex(-40%) scale(0.85);
     opacity: 0.8;
     z-index: 2;
 }
-#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-6, #item-5:checked ~ .cards #song-3, #item-6:checked ~ .cards #song-7, #item-7:checked ~ .cards #song-5 {
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-6, #item-5:checked ~ .cards #song-3 {
     transform: translatex(40%) scale(0.85);
     opacity: 0.8;
     z-index: 2;
 }
-#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-6, #item-3:checked ~ .cards #song-2, #item-4:checked ~ .cards #song-7, #item-5:checked ~ .cards #song-1, #item-6:checked ~ .cards #song-5, #item-7:checked ~ .cards #song-3 {
+#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-6, #item-3:checked ~ .cards #song-2, #item-4:checked ~ .cards #song-7, #item-5:checked ~ .cards #song-1 {
     transform: translatex(80%) scale(0.7);
     opacity: 0.4;
     z-index: 1;
 }
-#item-1:checked ~ .cards #song-6, #item-2:checked ~ .cards #song-7, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-2, #item-6:checked ~ .cards #song-3, #item-7:checked ~ .cards #song-1 {
+#item-1:checked ~ .cards #song-6, #item-2:checked ~ .cards #song-7, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-2 {
     transform: translatex(100%) scale(0.55);
     opacity: 0.4;
     z-index: 0;
 }
-#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-5, #item-6:checked ~ .cards #song-6, #item-7:checked ~ .cards #song-7 {
+*/
+#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-5, #item-3:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-2, #item-5:checked ~ .cards #song-3 {
+    transform: translatex(100%) scale(.55);
+    opacity: .4;
+    z-index: 0;
+}
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-1, #item-5:checked ~ .cards #song-2 {
+    transform: translatex(80%) scale(.7);
+    opacity: .4;
+    z-index: 1;
+}
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(.85);
+    opacity: .8;
+    z-index: 2;
+}
+#item-1:checked ~ .cards #song-5, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2, #item-4:checked ~ .cards #song-3, #item-5:checked ~ .cards #song-4 {
+    transform: translatex(-40%) scale(.85);
+    opacity: .8;
+    z-index: 2;
+}
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-5 {
     transform: translatex(0) scale(1);
     opacity: 1;
     z-index: 3;
 }
-#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img, #item-4:checked ~ .cards #song-4 img, #item-5:checked ~ .cards #song-5 img, #item-6:checked ~ .cards #song-6 img, #item-7:checked ~ .cards #song-7 img  {
+#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img, #item-4:checked ~ .cards #song-4 img, #item-5:checked ~ .cards #song-5 img{
     box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
 #projects-info {
@@ -355,10 +377,10 @@ img {
 #label1 {
     display: none;
 }
-#item-1:checked ~ #projects-info #label1, #item-2:checked ~ #projects-info #label2, #item-3:checked ~ #projects-info #label3, #item-4:checked ~ #projects-info #label4, #item-5:checked ~ #projects-info #label5, #item-6:checked ~ #projects-info #label6, #item-7:checked ~ #projects-info #label7 {
+#item-1:checked ~ #projects-info #label1, #item-2:checked ~ #projects-info #label2, #item-3:checked ~ #projects-info #label3, #item-4:checked ~ #projects-info #label4, #item-5:checked ~ #projects-info #label5{
     display: block;
 }
-#item-1:checked ~ #projects-info .project-short:not(#label1), #item-2:checked ~ #projects-info .project-short:not(#label2), #item-3:checked ~ #projects-info .project-short:not(#label3), #item-4:checked ~ #projects-info .project-short:not(#label4), #item-5:checked ~ #projects-info .project-short:not(#label5), #item-6:checked ~ #projects-info .project-short:not(#label6), #item-7:checked ~ #projects-info .project-short:not(#label7) {
+#item-1:checked ~ #projects-info .project-short:not(#label1), #item-2:checked ~ #projects-info .project-short:not(#label2), #item-3:checked ~ #projects-info .project-short:not(#label3), #item-4:checked ~ #projects-info .project-short:not(#label4), #item-5:checked ~ #projects-info .project-short:not(#label5){
     display: none;
 }
 footer {
